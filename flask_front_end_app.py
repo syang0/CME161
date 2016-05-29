@@ -13,6 +13,11 @@ def index():
 def send_assets(path):
     return send_from_directory('app/assets/', path)
 
+@app.route('/three/<path>')
+def send_three(path):
+    print path
+    return send_from_directory('app/assets/html', path)
+
 if __name__ == "__main__":
 	port = int(os.environ.get("PORT", 5050))
 	app.run(host='0.0.0.0', port=port, debug=False)

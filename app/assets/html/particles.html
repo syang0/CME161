@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Three.js Particles</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <style>
+        body {
+            color: #808080;
+            font-family:Monospace;
+            font-size:13px;
+            text-align:center;
+
+            background-color: #ffffff;
+            margin: 0px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+<div id="container"></div>
+<canvas id="three_particle"></canvas>
+
+<!-- Renderer -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r76/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.min.js"></script>
+<!-- Physics - Particle -->
+<script src="/assets/js/physics/physics_particle_simple.js"></script>
+<script src="/assets/js/physics/physics_particle.js"></script>
+<!-- Render - Particle -->
+<script src="/assets/js/renderers/render_particle.js"></script>
+
+</body>
+</html>
