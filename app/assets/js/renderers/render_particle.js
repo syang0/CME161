@@ -143,8 +143,8 @@ function draw() {
 requestAnimationFrame(draw);
 
 function mouseClicked(event) {
-    for (var i = 0; i < data.length; i++) {
-        par[i].boost();
+    for (var i = 0; i < particles.length; i++) {
+        particles[i].boost();
     }
 }
 
