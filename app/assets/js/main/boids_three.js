@@ -85,9 +85,9 @@ var controls_state = {
     "directional_light_intensity": 1,
     "show_axis": true,
     "show_bounding_box": true,
-    "neighborhood_radius":100,
-    "max_steer_force":0.1,
-    "max_speed":4,
+    "coeff_alignment":1,
+    "coeff_cohesion":1,
+    "coeff_separation":1,
     "saturation":1.1,
     "level":0.4,
     "avoidWalls":true
@@ -140,29 +140,24 @@ gui.add(controls_state, 'show_bounding_box')
         else    { container.remove(bounding_box); }
     });
 
-gui.add(controls_state, 'neighborhood_radius', 10, 500)
+gui.add(controls_state, 'coeff_alignment', 0, 5)
     .onChange(function(value) {
-        boids.forEach(function(b) {b.setNeighborhoodRadius(value)});
+        boids.forEach(function(b) {b.coeff_alignment = value});
     });
 
-gui.add(controls_state, 'max_steer_force', 0, 1)
+gui.add(controls_state, 'coeff_cohesion', 0, 5)
     .onChange(function(value) {
-        boids.forEach(function(b) {b.setMaxSteerForce(value)});
+        boids.forEach(function(b) {b.coeff_cohesion = value});
     });
 
-gui.add(controls_state, 'max_speed', 1, 5)
+gui.add(controls_state, 'coeff_separation', 0, 5)
     .onChange(function(value) {
-        boids.forEach(function(b) {b.setMaxSpeed(value)});
+        boids.forEach(function(b) {b.coeff_separation = value});
     });
 
 gui.add(controls_state, 'saturation', 0.4, 1.1);
 
 gui.add(controls_state, 'level', 0.4, 1.1);
-
-gui.add(controls_state, 'avoidWalls')
-    .onChange(function(value) {
-        boids.forEach(function(b) {b.setAvoidWalls(value)});
-    });
 
 /**
     * Actions Required:

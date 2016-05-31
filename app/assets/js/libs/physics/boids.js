@@ -1,14 +1,26 @@
-var Boid = function(sceneWidth, sceneHeight ) {
+/*
 
-    // depends on Vector3 
+Based on work by https://github.com/wetmore, https://github.com/mrdoob/
+Modified by https://github.com/dderiso (2016) to expose alignment, separation, and cohesion as public properties
+
+*/
+
+var Boid = function() {
+
+    // depends on Vector3
     var vector = new Vector3(),
-        _acceleration, _width = sceneWidth,
-        _height = sceneHeight,
+        _acceleration, _width = 500,
+        _height = 500,
         _depth = 200,
         _goal, _neighborhoodRadius = 100,
         _maxSpeed = 4,
         _maxSteerForce = 0.1,
         _avoidWalls = false;
+
+    this.coeff_alignment = 1,
+    this.coeff_cohesion = 1,
+    this.coeff_separation = 1;
+
 
     this.position = new Vector3();
     this.velocity = new Vector3();
@@ -18,21 +30,8 @@ var Boid = function(sceneWidth, sceneHeight ) {
         _goal = target;
     }
 
-
-    this.setNeighborhoodRadius = function (value) {
-        _neighborhoodRadius = value;
-    }
-
     this.setAvoidWalls = function(value) {
         _avoidWalls = value;
-    }
-
-    this.setMaxSpeed = function(value) {
-        _maxSpeed = value;
-    }
-
-    this.setMaxSteerForce = function(value) {
-        _maxSteerForce = value;
     }
 
     this.setWorldSize = function(width, height, depth) {
@@ -48,7 +47,7 @@ var Boid = function(sceneWidth, sceneHeight ) {
     this.velocity.y = Math.random() * 2 - 1;
     this.velocity.z = Math.random() * 2 - 1;
     this.setAvoidWalls(true);
-    this.setWorldSize(sceneWidth, sceneHeight, 400);
+    this.setWorldSize(500, 500, 400);
 
     this.run = function(boids) {
 
@@ -99,9 +98,9 @@ var Boid = function(sceneWidth, sceneHeight ) {
             _acceleration.add(this.reach(_goal, 0.005));
         }
 
-        _acceleration.add(this.alignment(boids));
-        _acceleration.add(this.cohesion(boids));
-        _acceleration.add(this.separation(boids));
+        _acceleration.add(this.alignment(boids).multiplyScalar(this.coeff_alignment));
+        _acceleration.add(this.cohesion(boids).multiplyScalar(this.coeff_cohesion));
+        _acceleration.add(this.separation(boids).multiplyScalar(this.coeff_separation));
     }
 
     this.move = function() {
