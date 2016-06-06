@@ -1,0 +1,6 @@
+RAMCloud run command: make DEBUG=NO -j16 && clear && clear && scripts/clusterperf.py dataViz -T tcp-1g
+
+After that
+  1) copy the logs files to the ./logs/ folder
+  2) run ./parser.py and direct output to ../app/assets/data/processed.json
+  3) start flask and it should be good to go!

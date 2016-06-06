@@ -1,0 +1,199 @@
+1465109187.086731489 ServerMain.cc:252 in main NOTICE[1]: Command line: /home/syang0/.netbeans/remote/rcmaster.scs.stanford.edu/stephens-macbook-pro-6.local-MacOSX-x86_64/Users/syang0/Desktop/ramcloud_curr/obj.dataViz/server -C tcp:host=rc19,port=12246 -L tcp:host=rc11,port=12247 -r 3 -l NOTICE --clusterName __unnamed__ --logFile logs/20160604234626/server2.rc11.log --preferredIndex 2 --maxCores 2 --totalMasterMemory 1500 -f /dev/sda2,/dev/sdb2
+1465109187.086745466 ServerMain.cc:253 in main NOTICE[1]: Server process id: 5913
+1465109187.088970977 ServerMain.cc:286 in main NOTICE[1]: MASTER_SERVICE, BACKUP_SERVICE, PING_SERVICE, MEMBERSHIP_SERVICE: Listening on tcp:host=rc11,port=12247
+1465109187.091538847 ServerMain.cc:326 in main NOTICE[1]: Using 3 backups
+1465109187.091557786 ServerConfig.h:570 in setLogAndHashTableSize NOTICE[1]: Master to allocate 1572864000 bytes total, 157286400 of which for the hash table
+1465109187.091562661 ServerConfig.h:572 in setLogAndHashTableSize NOTICE[1]: Master will have 168 segments and 2457600 lines in the hash table
+1465109187.091566132 ServerMain.cc:331 in main NOTICE[1]: PortTimeOut=-1
+1465109187.091568976 PortAlarm.cc:160 in setPortTimeout NOTICE[1]: Set PortTimeout to -1 (ms: -1 to disable.)
+1465109187.091667669 Server.cc:87 in run NOTICE[1]: Starting services
+1465109187.091676036 Server.cc:151 in createAndRegisterServices NOTICE[1]: Master is using 3 backups
+1465109187.091722685 LargeBlockOfMemory.h:241 in mmapGigabyteAligned NOTICE[1]: Populating pages; progress 0 of 1350 MB
+1465109187.379348693 LargeBlockOfMemory.h:241 in mmapGigabyteAligned NOTICE[1]: Populating pages; progress 1024 of 1350 MB
+1465109187.470529716 SegletAllocator.cc:162 in initializeEmergencyHeadReserve NOTICE[1]: Reserved 256 seglets for emergency head segments (16 MB). 21344 seglets (1334 MB) left in default pool.
+1465109187.470607344 SegletAllocator.cc:197 in initializeCleanerReserve NOTICE[1]: Reserved 1920 seglets for the cleaner (120 MB). 19424 seglets (1214 MB) left in default pool.
+1465109187.470627656 LogCleaner.cc:798 in TombstoneRatioBalancer NOTICE[1]: Using tombstone ratio balancer with ratio = 0.400000
+1465109187.470648721 LargeBlockOfMemory.h:241 in mmapGigabyteAligned NOTICE[1]: Populating pages; progress 0 of 128 MB
+1465109187.506253367 Server.cc:156 in createAndRegisterServices NOTICE[1]: Starting backup service
+1465109187.506897854 MultiFileStorage.cc:1002 in MultiFileStorage NOTICE[1]: Backup storage opened with 4294967296 bytes available; allocated 512 frame(s) across 2 file(s) with 8388608 bytes per frame
+1465109187.810629960 BackupStorage.cc:68 in benchmark NOTICE[1]: Backup storage speeds (min): 385 MB/s read
+1465109187.810641188 BackupStorage.cc:69 in benchmark NOTICE[1]: Backup storage speeds (avg): 421 MB/s read,
+1465109187.810642436 BackupStorage.cc:75 in benchmark NOTICE[1]: RANDOM_REFINE_AVG BackupStrategy selected
+1465109187.817773832 BackupService.cc:92 in BackupService NOTICE[1]: Cluster '__unnamed__'; ignoring existing backup storage. Any replicas stored will not be reusable by future backups. Specify clusterName for persistence across backup restarts.
+1465109187.817788687 Server.cc:160 in createAndRegisterServices NOTICE[1]: Backup service started
+1465109187.817793925 Server.cc:89 in run NOTICE[1]: Services started
+1465109187.817796802 Server.cc:94 in run NOTICE[1]: Pinning memory
+1465109188.084232036 Server.cc:96 in run NOTICE[1]: Memory pinned
+1465109188.084277613 Server.cc:197 in enlist NOTICE[2]: Enlisting with cooordinator
+1465109188.085698342 CoordinatorSession.cc:105 in getSession NOTICE[2]: Opened session with coordinator at tcp:host=rc19,port=12246
+1465109188.085708903 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending ENLIST_SERVER request to tcp:host=rc19,port=12246 with 53 bytes
+1465109188.086001614 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received ENLIST_SERVER response from tcp:host=rc19,port=12246 with 12 bytes
+1465109188.086003991 Server.cc:204 in enlist NOTICE[2]: Enlisted; serverId 2.0
+1465109188.086008784 MasterService.cc:794 in initOnceEnlisted NOTICE[2]: My server ID is 2.0
+1465109188.087102688 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_ID request from tcp:host=192.168.0.119,port=33563 with 4 bytes
+1465109188.087175274 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_ID response to tcp:host=192.168.0.119,port=33563 with 12 bytes
+1465109188.087323758 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST request from tcp:host=192.168.0.119,port=33563 with 149 bytes
+1465109188.089473618 BackupService.cc:323 in initOnceEnlisted NOTICE[2]: My server ID is 2.0
+1465109188.089524076 LogCleaner.cc:199 in cleanerThreadEntry NOTICE[3]: LogCleaner thread started
+1465109188.089545929 ServerList.cc:188 in applyServerList NOTICE[4]: Server 1.0 is up (server list version 2)
+1465109188.089553980 ServerList.cc:188 in applyServerList NOTICE[4]: Server 2.0 is up (server list version 2)
+1465109188.089576050 TcpTransport.cc:955 in sendReply ERROR[1]: Sending UPDATE_SERVER_LIST response to tcp:host=192.168.0.119,port=33563 with 12 bytes
+1465109188.097385863 BackupService.cc:330 in initOnceEnlisted NOTICE[2]: Backup 2.0 will store replicas under cluster name '__unnamed__'
+1465109188.097391885 Server.cc:217 in enlist ERROR[2]: ABBCCDDD
+1465109188.097393710 Server.cc:219 in enlist ERROR[2]: ASDFFFF
+1465109188.099195798 MemoryMonitor.cc:62 in handleTimerEvent NOTICE[2]: Memory usage now 2607 MB (increased 2607 MB)
+1465109188.099195829 FailureDetector.cc:104 in detectorThreadEntry NOTICE[5]: Failure detector thread started
+1465109188.113961622 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST request from tcp:host=192.168.0.119,port=33563 with 316 bytes
+1465109188.114069763 ServerList.cc:188 in applyServerList NOTICE[4]: Server 3.0 is up (server list version 3)
+1465109188.114082091 BackupService.cc:685 in trackerChangesEnqueued NOTICE[4]: Starting backup replica garbage collector thread
+1465109188.115804677 ServerList.cc:188 in applyServerList NOTICE[4]: Server 3.0 is up (server list version 4)
+1465109188.115823431 ServerList.cc:188 in applyServerList NOTICE[4]: Server 2.0 is up (server list version 5)
+1465109188.115831862 ServerList.cc:188 in applyServerList NOTICE[4]: Server 1.0 is up (server list version 6)
+1465109188.115841419 TcpTransport.cc:955 in sendReply ERROR[1]: Sending UPDATE_SERVER_LIST response to tcp:host=192.168.0.119,port=33563 with 12 bytes
+1465109188.158636526 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST request from tcp:host=192.168.0.119,port=33563 with 88 bytes
+1465109188.158727232 ServerList.cc:188 in applyServerList NOTICE[4]: Server 4.0 is up (server list version 7)
+1465109188.158739492 TcpTransport.cc:955 in sendReply ERROR[1]: Sending UPDATE_SERVER_LIST response to tcp:host=192.168.0.119,port=33563 with 12 bytes
+1465109188.207550116 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST request from tcp:host=192.168.0.119,port=33563 with 88 bytes
+1465109188.207634823 ServerList.cc:188 in applyServerList NOTICE[4]: Server 5.0 is up (server list version 8)
+1465109188.207647977 TcpTransport.cc:955 in sendReply ERROR[1]: Sending UPDATE_SERVER_LIST response to tcp:host=192.168.0.119,port=33563 with 12 bytes
+1465109188.251251536 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST request from tcp:host=192.168.0.119,port=33563 with 316 bytes
+1465109188.251347562 ServerList.cc:188 in applyServerList NOTICE[4]: Server 6.0 is up (server list version 9)
+1465109188.251372690 ServerList.cc:188 in applyServerList NOTICE[4]: Server 6.0 is up (server list version 10)
+1465109188.251393585 ServerList.cc:188 in applyServerList NOTICE[4]: Server 5.0 is up (server list version 11)
+1465109188.251407523 ServerList.cc:188 in applyServerList NOTICE[4]: Server 4.0 is up (server list version 12)
+1465109188.251416896 TcpTransport.cc:955 in sendReply ERROR[1]: Sending UPDATE_SERVER_LIST response to tcp:host=192.168.0.119,port=33563 with 12 bytes
+1465109188.305924993 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST request from tcp:host=192.168.0.119,port=33563 with 88 bytes
+1465109188.305997995 ServerList.cc:188 in applyServerList NOTICE[4]: Server 7.0 is up (server list version 13)
+1465109188.306010039 TcpTransport.cc:955 in sendReply ERROR[1]: Sending UPDATE_SERVER_LIST response to tcp:host=192.168.0.119,port=33563 with 12 bytes
+1465109188.376000067 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST request from tcp:host=192.168.0.119,port=33563 with 88 bytes
+1465109188.376062612 ServerList.cc:188 in applyServerList NOTICE[4]: Server 8.0 is up (server list version 14)
+1465109188.376075569 TcpTransport.cc:955 in sendReply ERROR[1]: Sending UPDATE_SERVER_LIST response to tcp:host=192.168.0.119,port=33563 with 12 bytes
+1465109188.605366783 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_ID request from tcp:host=192.168.0.110,port=42138 with 4 bytes
+1465109188.605415055 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_ID response to tcp:host=192.168.0.110,port=42138 with 12 bytes
+1465109188.605602168 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received BACKUP_WRITE request from tcp:host=192.168.0.110,port=42138 with 136 bytes
+1465109188.605616481 TcpTransport.cc:955 in sendReply ERROR[1]: Sending BACKUP_WRITE response to tcp:host=192.168.0.110,port=42138 with 4 bytes
+1465109188.609342218 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received TAKE_TABLET_OWNERSHIP request from tcp:host=192.168.0.119,port=33563 with 36 bytes
+1465109188.610456203 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending GET_SERVER_ID request to tcp:host=rc12,port=12247 with 4 bytes
+1465109188.610796565 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received GET_SERVER_ID response from tcp:host=rc12,port=12247 with 12 bytes
+1465109188.610800507 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending BACKUP_WRITE request to tcp:host=rc12,port=12247 with 136 bytes
+1465109188.611042702 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received BACKUP_WRITE response from tcp:host=rc12,port=12247 with 4 bytes
+1465109188.611888944 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending GET_SERVER_ID request to tcp:host=rc16,port=12247 with 4 bytes
+1465109188.612092826 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received GET_SERVER_ID response from tcp:host=rc16,port=12247 with 12 bytes
+1465109188.612096137 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending BACKUP_WRITE request to tcp:host=rc16,port=12247 with 136 bytes
+1465109188.612343029 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received BACKUP_WRITE response from tcp:host=rc16,port=12247 with 4 bytes
+1465109188.612930356 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending GET_SERVER_ID request to tcp:host=rc14,port=12247 with 4 bytes
+1465109188.613297628 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received GET_SERVER_ID response from tcp:host=rc14,port=12247 with 12 bytes
+1465109188.613301932 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending BACKUP_WRITE request to tcp:host=rc14,port=12247 with 136 bytes
+1465109188.613485916 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received BACKUP_WRITE response from tcp:host=rc14,port=12247 with 4 bytes
+1465109188.613487938 MasterService.cc:2390 in takeTabletOwnership NOTICE[4]: Took ownership of new tablet [0x0,0xffffffffffffffff] in tableId 2
+1465109188.613495940 TcpTransport.cc:955 in sendReply ERROR[1]: Sending TAKE_TABLET_OWNERSHIP response to tcp:host=192.168.0.119,port=33563 with 4 bytes
+1465109188.623760202 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_ID request from tcp:host=192.168.0.113,port=32829 with 4 bytes
+1465109188.623769312 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_ID response to tcp:host=192.168.0.113,port=32829 with 12 bytes
+1465109188.624010866 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received BACKUP_WRITE request from tcp:host=192.168.0.113,port=32829 with 136 bytes
+1465109188.624019256 TcpTransport.cc:955 in sendReply ERROR[1]: Sending BACKUP_WRITE response to tcp:host=192.168.0.113,port=32829 with 4 bytes
+1465109188.632585179 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_ID request from tcp:host=192.168.0.115,port=44772 with 4 bytes
+1465109188.632590036 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_ID response to tcp:host=192.168.0.115,port=44772 with 12 bytes
+1465109188.632813113 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received BACKUP_WRITE request from tcp:host=192.168.0.115,port=44772 with 136 bytes
+1465109188.632821318 TcpTransport.cc:955 in sendReply ERROR[1]: Sending BACKUP_WRITE response to tcp:host=192.168.0.115,port=44772 with 4 bytes
+1465109188.641676726 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_ID request from tcp:host=192.168.0.117,port=54201 with 4 bytes
+1465109188.641681490 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_ID response to tcp:host=192.168.0.117,port=54201 with 12 bytes
+1465109188.641897792 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received BACKUP_WRITE request from tcp:host=192.168.0.117,port=54201 with 136 bytes
+1465109188.641904747 TcpTransport.cc:955 in sendReply ERROR[1]: Sending BACKUP_WRITE response to tcp:host=192.168.0.117,port=54201 with 4 bytes
+1465109188.642423113 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received TAKE_TABLET_OWNERSHIP request from tcp:host=192.168.0.119,port=33563 with 36 bytes
+1465109188.642426907 MasterService.cc:2390 in takeTabletOwnership NOTICE[4]: Took ownership of new tablet [0xe000000000000000,0xffffffffffffffff] in tableId 3
+1465109188.642432849 TcpTransport.cc:955 in sendReply ERROR[1]: Sending TAKE_TABLET_OWNERSHIP response to tcp:host=192.168.0.119,port=33563 with 4 bytes
+1465109188.644804231 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received BACKUP_WRITE request from tcp:host=192.168.0.113,port=32829 with 273 bytes
+1465109188.644810472 TcpTransport.cc:955 in sendReply ERROR[1]: Sending BACKUP_WRITE response to tcp:host=192.168.0.113,port=32829 with 4 bytes
+1465109188.646138021 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received WRITE request from tcp:host=192.168.0.118,port=44872 with 202 bytes
+1465109188.646154911 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending BACKUP_WRITE request to tcp:host=rc12,port=12247 with 273 bytes
+1465109188.646161158 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending BACKUP_WRITE request to tcp:host=rc16,port=12247 with 273 bytes
+1465109188.646165386 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending BACKUP_WRITE request to tcp:host=rc14,port=12247 with 273 bytes
+1465109188.646406745 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received BACKUP_WRITE response from tcp:host=rc12,port=12247 with 4 bytes
+1465109188.646410864 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received BACKUP_WRITE response from tcp:host=rc16,port=12247 with 4 bytes
+1465109188.646425908 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received BACKUP_WRITE response from tcp:host=rc14,port=12247 with 4 bytes
+1465109188.646428741 TcpTransport.cc:955 in sendReply ERROR[1]: Sending WRITE response to tcp:host=192.168.0.118,port=44872 with 12 bytes
+1465109188.646835898 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received BACKUP_WRITE request from tcp:host=192.168.0.113,port=32829 with 273 bytes
+1465109188.646840466 TcpTransport.cc:955 in sendReply ERROR[1]: Sending BACKUP_WRITE response to tcp:host=192.168.0.113,port=32829 with 4 bytes
+1465109188.648597405 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received BACKUP_WRITE request from tcp:host=192.168.0.117,port=54201 with 273 bytes
+1465109188.648604199 TcpTransport.cc:955 in sendReply ERROR[1]: Sending BACKUP_WRITE response to tcp:host=192.168.0.117,port=54201 with 4 bytes
+1465109188.650426082 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received BACKUP_WRITE request from tcp:host=192.168.0.110,port=42138 with 273 bytes
+1465109188.650430823 TcpTransport.cc:955 in sendReply ERROR[1]: Sending BACKUP_WRITE response to tcp:host=192.168.0.110,port=42138 with 4 bytes
+1465109188.650971380 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received BACKUP_WRITE request from tcp:host=192.168.0.110,port=42138 with 273 bytes
+1465109188.650976905 TcpTransport.cc:955 in sendReply ERROR[1]: Sending BACKUP_WRITE response to tcp:host=192.168.0.110,port=42138 with 4 bytes
+1465109188.652867117 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received BACKUP_WRITE request from tcp:host=192.168.0.117,port=54201 with 273 bytes
+1465109188.652871579 TcpTransport.cc:955 in sendReply ERROR[1]: Sending BACKUP_WRITE response to tcp:host=192.168.0.117,port=54201 with 4 bytes
+1465109188.654852620 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received BACKUP_WRITE request from tcp:host=192.168.0.113,port=32829 with 273 bytes
+1465109188.654858493 TcpTransport.cc:955 in sendReply ERROR[1]: Sending BACKUP_WRITE response to tcp:host=192.168.0.113,port=32829 with 4 bytes
+1465109188.655690189 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received READ request from tcp:host=192.168.0.118,port=44872 with 56 bytes
+1465109188.655700724 TcpTransport.cc:955 in sendReply ERROR[1]: Sending READ response to tcp:host=192.168.0.118,port=44872 with 116 bytes
+1465109188.656651796 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received READ request from tcp:host=192.168.0.118,port=44872 with 56 bytes
+1465109188.656658608 TcpTransport.cc:955 in sendReply ERROR[1]: Sending READ response to tcp:host=192.168.0.118,port=44872 with 116 bytes
+1465109188.658517717 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received READ request from tcp:host=192.168.0.118,port=44872 with 56 bytes
+1465109188.658524358 TcpTransport.cc:955 in sendReply ERROR[1]: Sending READ response to tcp:host=192.168.0.118,port=44872 with 116 bytes
+1465109188.661255401 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received TAKE_TABLET_OWNERSHIP request from tcp:host=192.168.0.119,port=33563 with 36 bytes
+1465109188.661326485 MasterService.cc:2390 in takeTabletOwnership NOTICE[4]: Took ownership of new tablet [0xe000000000000000,0xffffffffffffffff] in tableId 4
+1465109188.661332651 TcpTransport.cc:955 in sendReply ERROR[1]: Sending TAKE_TABLET_OWNERSHIP response to tcp:host=192.168.0.119,port=33563 with 4 bytes
+1465109188.663378635 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received TAKE_TABLET_OWNERSHIP request from tcp:host=192.168.0.119,port=33563 with 36 bytes
+1465109188.663383076 MasterService.cc:2390 in takeTabletOwnership NOTICE[4]: Took ownership of new tablet [0x0,0xffffffffffffffff] in tableId 12
+1465109188.663388979 TcpTransport.cc:955 in sendReply ERROR[1]: Sending TAKE_TABLET_OWNERSHIP response to tcp:host=192.168.0.119,port=33563 with 4 bytes
+1465109188.665295366 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received TAKE_INDEXLET_OWNERSHIP request from tcp:host=192.168.0.119,port=33563 with 35 bytes
+1465109188.665309172 MasterService.cc:2466 in takeIndexletOwnership NOTICE[4]: Took ownership of indexlet in tableId 4 indexId 1
+1465109188.665313680 TcpTransport.cc:955 in sendReply ERROR[1]: Sending TAKE_INDEXLET_OWNERSHIP response to tcp:host=192.168.0.119,port=33563 with 4 bytes
+1465109188.667589927 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received BACKUP_WRITE request from tcp:host=192.168.0.117,port=54201 with 304 bytes
+1465109188.667595345 TcpTransport.cc:955 in sendReply ERROR[1]: Sending BACKUP_WRITE response to tcp:host=192.168.0.117,port=54201 with 4 bytes
+1465109188.668899824 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received BACKUP_WRITE request from tcp:host=192.168.0.113,port=32829 with 428 bytes
+1465109188.668905795 TcpTransport.cc:955 in sendReply ERROR[1]: Sending BACKUP_WRITE response to tcp:host=192.168.0.113,port=32829 with 4 bytes
+1465109188.669182722 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received BACKUP_WRITE request from tcp:host=192.168.0.117,port=54201 with 304 bytes
+1465109188.669186851 TcpTransport.cc:955 in sendReply ERROR[1]: Sending BACKUP_WRITE response to tcp:host=192.168.0.117,port=54201 with 4 bytes
+1465109188.671284302 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received BACKUP_WRITE request from tcp:host=192.168.0.113,port=32829 with 304 bytes
+1465109188.671289861 TcpTransport.cc:955 in sendReply ERROR[1]: Sending BACKUP_WRITE response to tcp:host=192.168.0.113,port=32829 with 4 bytes
+1465109188.672418930 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received BACKUP_WRITE request from tcp:host=192.168.0.115,port=44772 with 428 bytes
+1465109188.672423388 TcpTransport.cc:955 in sendReply ERROR[1]: Sending BACKUP_WRITE response to tcp:host=192.168.0.115,port=44772 with 4 bytes
+1465109188.672702180 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received BACKUP_WRITE request from tcp:host=192.168.0.117,port=54201 with 304 bytes
+1465109188.672706164 TcpTransport.cc:955 in sendReply ERROR[1]: Sending BACKUP_WRITE response to tcp:host=192.168.0.117,port=54201 with 4 bytes
+1465109188.674600290 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received WRITE request from tcp:host=192.168.0.118,port=44872 with 233 bytes
+1465109188.674609845 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending GET_TABLE_CONFIG request to tcp:host=rc19,port=12246 with 12 bytes
+1465109188.674898763 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received GET_TABLE_CONFIG response from tcp:host=rc19,port=12246 with 879 bytes
+1465109188.675708096 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending INSERT_INDEX_ENTRY request to tcp:host=rc17,port=12247 with 53 bytes
+1465109188.675922205 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received BACKUP_WRITE request from tcp:host=192.168.0.117,port=54201 with 428 bytes
+1465109188.675936458 TcpTransport.cc:955 in sendReply ERROR[1]: Sending BACKUP_WRITE response to tcp:host=192.168.0.117,port=54201 with 4 bytes
+1465109188.676034479 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received INSERT_INDEX_ENTRY response from tcp:host=rc17,port=12247 with 4 bytes
+1465109188.676041315 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending BACKUP_WRITE request to tcp:host=rc12,port=12247 with 304 bytes
+1465109188.676045201 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending BACKUP_WRITE request to tcp:host=rc16,port=12247 with 304 bytes
+1465109188.676048695 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending BACKUP_WRITE request to tcp:host=rc14,port=12247 with 304 bytes
+1465109188.676207694 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received BACKUP_WRITE response from tcp:host=rc16,port=12247 with 4 bytes
+1465109188.676211268 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received BACKUP_WRITE response from tcp:host=rc14,port=12247 with 4 bytes
+1465109188.676256522 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received BACKUP_WRITE response from tcp:host=rc12,port=12247 with 4 bytes
+1465109188.676259841 TcpTransport.cc:955 in sendReply ERROR[1]: Sending WRITE response to tcp:host=192.168.0.118,port=44872 with 12 bytes
+1465109188.677695557 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received BACKUP_WRITE request from tcp:host=192.168.0.110,port=42138 with 428 bytes
+1465109188.677702505 TcpTransport.cc:955 in sendReply ERROR[1]: Sending BACKUP_WRITE response to tcp:host=192.168.0.110,port=42138 with 4 bytes
+1465109188.677971990 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received BACKUP_WRITE request from tcp:host=192.168.0.110,port=42138 with 304 bytes
+1465109188.677975788 TcpTransport.cc:955 in sendReply ERROR[1]: Sending BACKUP_WRITE response to tcp:host=192.168.0.110,port=42138 with 4 bytes
+1465109188.679520501 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received INSERT_INDEX_ENTRY request from tcp:host=192.168.0.114,port=58952 with 53 bytes
+1465109188.679533660 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending BACKUP_WRITE request to tcp:host=rc12,port=12247 with 428 bytes
+1465109188.679538045 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending BACKUP_WRITE request to tcp:host=rc16,port=12247 with 428 bytes
+1465109188.679541582 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending BACKUP_WRITE request to tcp:host=rc14,port=12247 with 428 bytes
+1465109188.679706462 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received BACKUP_WRITE response from tcp:host=rc12,port=12247 with 4 bytes
+1465109188.679710105 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received BACKUP_WRITE response from tcp:host=rc16,port=12247 with 4 bytes
+1465109188.679758565 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received BACKUP_WRITE response from tcp:host=rc14,port=12247 with 4 bytes
+1465109188.679761936 TcpTransport.cc:955 in sendReply ERROR[1]: Sending INSERT_INDEX_ENTRY response to tcp:host=192.168.0.114,port=58952 with 4 bytes
+1465109188.680623802 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received BACKUP_WRITE request from tcp:host=192.168.0.110,port=42138 with 304 bytes
+1465109188.680629273 TcpTransport.cc:955 in sendReply ERROR[1]: Sending BACKUP_WRITE response to tcp:host=192.168.0.110,port=42138 with 4 bytes
+1465109188.682170727 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received BACKUP_WRITE request from tcp:host=192.168.0.115,port=44772 with 304 bytes
+1465109188.682174917 TcpTransport.cc:955 in sendReply ERROR[1]: Sending BACKUP_WRITE response to tcp:host=192.168.0.115,port=44772 with 4 bytes
+1465109188.684756574 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received READ_HASHES request from tcp:host=192.168.0.118,port=44872 with 24 bytes
+1465109188.684762834 TcpTransport.cc:955 in sendReply ERROR[1]: Sending READ_HASHES response to tcp:host=192.168.0.118,port=44872 with 188 bytes
+1465109188.685442021 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received READ_HASHES request from tcp:host=192.168.0.118,port=44872 with 24 bytes
+1465109188.685448076 TcpTransport.cc:955 in sendReply ERROR[1]: Sending READ_HASHES response to tcp:host=192.168.0.118,port=44872 with 188 bytes
+1465109188.685776096 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received READ_HASHES request from tcp:host=192.168.0.118,port=44872 with 24 bytes
+1465109188.685780168 TcpTransport.cc:955 in sendReply ERROR[1]: Sending READ_HASHES response to tcp:host=192.168.0.118,port=44872 with 188 bytes
+1465109188.687926627 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received READ_HASHES request from tcp:host=192.168.0.118,port=44872 with 24 bytes
+1465109188.687930852 TcpTransport.cc:955 in sendReply ERROR[1]: Sending READ_HASHES response to tcp:host=192.168.0.118,port=44872 with 188 bytes
+1465109188.687990219 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received LOOKUP_INDEX_KEYS request from tcp:host=192.168.0.118,port=44872 with 60 bytes
+1465109188.688000308 TcpTransport.cc:955 in sendReply ERROR[1]: Sending LOOKUP_INDEX_KEYS response to tcp:host=192.168.0.118,port=44872 with 27 bytes
+1465109188.689083398 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received SERVER_CONTROL request from tcp:host=192.168.0.119,port=33563 with 27 bytes
+1465109188.689088811 TimeTrace.cc:186 in printInternal NOTICE[4]: No time trace events to print
+1465109188.689093301 TcpTransport.cc:955 in sendReply ERROR[1]: Sending SERVER_CONTROL response to tcp:host=192.168.0.119,port=33563 with 16 bytes
+1465109188.689578905 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received SERVER_CONTROL request from tcp:host=192.168.0.119,port=33563 with 27 bytes
+1465109188.689582503 CacheTrace.cc:113 in printInternal NOTICE[4]: No cache trace events to print
+1465109188.689585418 TcpTransport.cc:955 in sendReply ERROR[1]: Sending SERVER_CONTROL response to tcp:host=192.168.0.119,port=33563 with 16 bytes

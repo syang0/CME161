@@ -1,0 +1,519 @@
+1465109186.785674776 CoordinatorMain.cc:97 in main NOTICE[1]: Command line: /home/syang0/.netbeans/remote/rcmaster.scs.stanford.edu/stephens-macbook-pro-6.local-MacOSX-x86_64/Users/syang0/Desktop/ramcloud_curr/obj.dataViz/coordinator -C tcp:host=rc19,port=12246 -l NOTICE --logFile logs/20160604234626/coordinator.rc19.log
+1465109186.785684909 CoordinatorMain.cc:98 in main NOTICE[1]: Coordinator process id: 5954
+1465109186.804694803 CoordinatorMain.cc:109 in main NOTICE[1]: coordinator: Listening on tcp:host=rc19,port=12246
+1465109186.804718170 CoordinatorMain.cc:112 in main NOTICE[1]: PortTimeOut=-1
+1465109186.804722139 PortAlarm.cc:160 in setPortTimeout NOTICE[1]: Set PortTimeout to -1 (ms: -1 to disable.)
+1465109186.804737647 CoordinatorMain.cc:139 in main NOTICE[1]: Cluster name is 'main', external storage workspace is '/ramcloud/main/'
+1465109186.806606237 CoordinatorClusterClock.cc:159 in recoverClusterTime WARNING[1]: couldn't find "coordinatorClusterClock" object in external storage; starting new clock from zero; benign if starting new cluster from scratch, may cause linearizability failures otherwise
+1465109186.806620159 CoordinatorClusterClock.cc:164 in recoverClusterTime NOTICE[1]: initializing CoordinatorClusterClock: startingClusterTime = 0
+1465109186.808501267 CoordinatorUpdateManager.cc:68 in init WARNING[2]: couldn't find "coordinatorUpdateManager" object in external storage; starting new cluster from scratch
+1465109186.808762244 CoordinatorServerList.cc:401 in recover NOTICE[2]: CoordinatorServerList recovery completed: 0 master(s), 0 backup(s), 0 update(s) to disseminate, server list version is 0
+1465109186.808768956 TableManager.cc:764 in recover NOTICE[2]: Table recovery complete: 0 table(s)
+1465109186.808788282 CoordinatorService.cc:112 in init NOTICE[2]: Coordinator state has been recovered from external storage; starting service
+1465109186.808800576 MemoryMonitor.cc:62 in handleTimerEvent NOTICE[3]: Memory usage now 94 MB (increased 94 MB)
+1465109186.842766874 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41640 with 8 bytes
+1465109186.842819493 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41640 with 19 bytes
+1465109187.405421380 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.405459012 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.415690413 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.415757490 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.426012842 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.426105942 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.436345533 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.436434096 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.446721242 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.446801041 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.457083934 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.457165691 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.467444162 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.467532105 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.477747347 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.477828950 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.488098529 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.488178444 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.498457085 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.498517157 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.508801048 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.508885528 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.519158044 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.519238540 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.529520534 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.529588309 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.539875461 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.539963123 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.550241451 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.550328505 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.560598611 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.560684876 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.570950460 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.570964521 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.581198890 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.581285136 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.591552611 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.591567334 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.601804090 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.601891968 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.612167788 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.612234786 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.622516082 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.622582626 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.632862662 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.632928977 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.643205364 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.643291078 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.653564498 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.653651210 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.663927060 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.664017943 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.674298856 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.674384890 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.684595798 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.684656113 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.694939578 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.695006275 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.705295333 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.705362487 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.715646019 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.715712321 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.725994436 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.726081214 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.736337593 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.736406091 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.746685265 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.746772955 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.757052650 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.757120871 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.767400356 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.767468697 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.777769389 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.777836844 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.788113750 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.788199095 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.798472308 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.798558866 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.808831022 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.808850490 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.808868254 MemoryMonitor.cc:62 in handleTimerEvent NOTICE[3]: Memory usage now 110 MB (increased 16 MB)
+1465109187.819091330 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.819110099 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.829388699 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.829406916 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.839685721 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.839704544 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.849929061 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.849944764 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.860170590 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.860183695 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.870460940 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.870479475 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.880761963 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.880780480 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.891062091 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.891080354 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.901358732 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.901377097 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.911659795 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.911678955 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.921962014 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.921981434 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.932259082 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.932277379 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.942551341 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.942569844 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.952852801 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.952871990 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.963158561 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.963176675 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.973451501 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.973469968 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.983752733 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.983771872 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109187.994053852 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109187.994073837 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109188.004361229 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109188.004380775 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109188.014657409 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109188.014676641 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109188.024955478 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109188.024974081 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 19 bytes
+1465109188.031000483 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received ENLIST_SERVER request from tcp:host=192.168.0.110,port=47629 with 53 bytes
+1465109188.031024499 CoordinatorServerList.cc:148 in enlistServer NOTICE[4]: Enlisting server at tcp:host=rc10,port=12247 (server id 1.0) supporting services: MASTER_SERVICE, BACKUP_SERVICE, PING_SERVICE, MEMBERSHIP_SERVICE
+1465109188.031053143 TcpTransport.cc:955 in sendReply ERROR[1]: Sending ENLIST_SERVER response to tcp:host=192.168.0.110,port=47629 with 12 bytes
+1465109188.032534328 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending GET_SERVER_ID request to tcp:host=rc10,port=12247 with 4 bytes
+1465109188.032870068 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received GET_SERVER_ID response from tcp:host=rc10,port=12247 with 12 bytes
+1465109188.032874691 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending UPDATE_SERVER_LIST request to tcp:host=rc10,port=12247 with 88 bytes
+1465109188.034751476 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST response from tcp:host=rc10,port=12247 with 12 bytes
+1465109188.035200681 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109188.035216884 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 80 bytes
+1465109188.045490839 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109188.045509537 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 80 bytes
+1465109188.055820526 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109188.055840130 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 80 bytes
+1465109188.066058792 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109188.066077441 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 80 bytes
+1465109188.076294144 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109188.076313112 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 80 bytes
+1465109188.085860418 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received ENLIST_SERVER request from tcp:host=192.168.0.111,port=55459 with 53 bytes
+1465109188.085873181 CoordinatorServerList.cc:148 in enlistServer NOTICE[4]: Enlisting server at tcp:host=rc11,port=12247 (server id 2.0) supporting services: MASTER_SERVICE, BACKUP_SERVICE, PING_SERVICE, MEMBERSHIP_SERVICE
+1465109188.085885301 TcpTransport.cc:955 in sendReply ERROR[1]: Sending ENLIST_SERVER response to tcp:host=192.168.0.111,port=55459 with 12 bytes
+1465109188.085904307 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending UPDATE_SERVER_LIST request to tcp:host=rc10,port=12247 with 88 bytes
+1465109188.086488002 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109188.086500478 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 141 bytes
+1465109188.086960267 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending GET_SERVER_ID request to tcp:host=rc11,port=12247 with 4 bytes
+1465109188.087252064 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received GET_SERVER_ID response from tcp:host=rc11,port=12247 with 12 bytes
+1465109188.087255628 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending UPDATE_SERVER_LIST request to tcp:host=rc11,port=12247 with 149 bytes
+1465109188.087813490 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST response from tcp:host=rc10,port=12247 with 12 bytes
+1465109188.089656090 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST response from tcp:host=rc11,port=12247 with 12 bytes
+1465109188.096715911 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109188.096735997 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 141 bytes
+1465109188.106961415 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109188.106980939 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 141 bytes
+1465109188.113747966 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received ENLIST_SERVER request from tcp:host=192.168.0.112,port=49132 with 53 bytes
+1465109188.113758576 CoordinatorServerList.cc:148 in enlistServer NOTICE[4]: Enlisting server at tcp:host=rc12,port=12247 (server id 3.0) supporting services: MASTER_SERVICE, BACKUP_SERVICE, PING_SERVICE, MEMBERSHIP_SERVICE
+1465109188.113770726 CoordinatorServerList.cc:772 in createReplicationGroups NOTICE[4]: Server 3.0 is now in replication group 1
+1465109188.113776967 CoordinatorServerList.cc:772 in createReplicationGroups NOTICE[4]: Server 2.0 is now in replication group 1
+1465109188.113782396 CoordinatorServerList.cc:772 in createReplicationGroups NOTICE[4]: Server 1.0 is now in replication group 1
+1465109188.113786934 TcpTransport.cc:955 in sendReply ERROR[1]: Sending ENLIST_SERVER response to tcp:host=192.168.0.112,port=49132 with 12 bytes
+1465109188.113808109 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending UPDATE_SERVER_LIST request to tcp:host=rc11,port=12247 with 316 bytes
+1465109188.114821904 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending GET_SERVER_ID request to tcp:host=rc12,port=12247 with 4 bytes
+1465109188.115100102 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received GET_SERVER_ID response from tcp:host=rc12,port=12247 with 12 bytes
+1465109188.115103779 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending UPDATE_SERVER_LIST request to tcp:host=rc12,port=12247 with 210 bytes
+1465109188.115118682 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending UPDATE_SERVER_LIST request to tcp:host=rc10,port=12247 with 316 bytes
+1465109188.115312261 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST response from tcp:host=rc12,port=12247 with 12 bytes
+1465109188.115441430 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST response from tcp:host=rc10,port=12247 with 12 bytes
+1465109188.115932553 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST response from tcp:host=rc11,port=12247 with 12 bytes
+1465109188.117126670 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109188.117140298 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 202 bytes
+1465109188.127341748 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109188.127362927 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 202 bytes
+1465109188.137584260 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109188.137603725 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 202 bytes
+1465109188.147821894 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109188.147841090 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 202 bytes
+1465109188.158094382 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109188.158114684 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 202 bytes
+1465109188.158455655 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received ENLIST_SERVER request from tcp:host=192.168.0.113,port=40179 with 53 bytes
+1465109188.158467311 CoordinatorServerList.cc:148 in enlistServer NOTICE[4]: Enlisting server at tcp:host=rc13,port=12247 (server id 4.0) supporting services: MASTER_SERVICE, BACKUP_SERVICE, PING_SERVICE, MEMBERSHIP_SERVICE
+1465109188.158478417 TcpTransport.cc:955 in sendReply ERROR[1]: Sending ENLIST_SERVER response to tcp:host=192.168.0.113,port=40179 with 12 bytes
+1465109188.158498867 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending UPDATE_SERVER_LIST request to tcp:host=rc10,port=12247 with 88 bytes
+1465109188.158505968 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending UPDATE_SERVER_LIST request to tcp:host=rc11,port=12247 with 88 bytes
+1465109188.158509509 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending UPDATE_SERVER_LIST request to tcp:host=rc12,port=12247 with 88 bytes
+1465109188.158807337 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST response from tcp:host=rc10,port=12247 with 12 bytes
+1465109188.158812298 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST response from tcp:host=rc11,port=12247 with 12 bytes
+1465109188.159402274 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending GET_SERVER_ID request to tcp:host=rc13,port=12247 with 4 bytes
+1465109188.159663085 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received GET_SERVER_ID response from tcp:host=rc13,port=12247 with 12 bytes
+1465109188.159666670 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending UPDATE_SERVER_LIST request to tcp:host=rc13,port=12247 with 271 bytes
+1465109188.160526358 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST response from tcp:host=rc12,port=12247 with 12 bytes
+1465109188.162498360 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST response from tcp:host=rc13,port=12247 with 12 bytes
+1465109188.168287294 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109188.168304765 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 263 bytes
+1465109188.178549931 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109188.178570283 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 263 bytes
+1465109188.188822870 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109188.188843401 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 263 bytes
+1465109188.199124367 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109188.199145121 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 263 bytes
+1465109188.206086391 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received ENLIST_SERVER request from tcp:host=192.168.0.114,port=50026 with 53 bytes
+1465109188.206097376 CoordinatorServerList.cc:148 in enlistServer NOTICE[4]: Enlisting server at tcp:host=rc14,port=12247 (server id 5.0) supporting services: MASTER_SERVICE, BACKUP_SERVICE, PING_SERVICE, MEMBERSHIP_SERVICE
+1465109188.206108366 TcpTransport.cc:955 in sendReply ERROR[1]: Sending ENLIST_SERVER response to tcp:host=192.168.0.114,port=50026 with 12 bytes
+1465109188.206143540 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending UPDATE_SERVER_LIST request to tcp:host=rc13,port=12247 with 88 bytes
+1465109188.207173078 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending GET_SERVER_ID request to tcp:host=rc14,port=12247 with 4 bytes
+1465109188.207408191 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received GET_SERVER_ID response from tcp:host=rc14,port=12247 with 12 bytes
+1465109188.207411856 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending UPDATE_SERVER_LIST request to tcp:host=rc14,port=12247 with 332 bytes
+1465109188.207420355 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending UPDATE_SERVER_LIST request to tcp:host=rc10,port=12247 with 88 bytes
+1465109188.207424445 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending UPDATE_SERVER_LIST request to tcp:host=rc11,port=12247 with 88 bytes
+1465109188.207428330 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending UPDATE_SERVER_LIST request to tcp:host=rc12,port=12247 with 88 bytes
+1465109188.207617970 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST response from tcp:host=rc10,port=12247 with 12 bytes
+1465109188.207667060 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST response from tcp:host=rc14,port=12247 with 12 bytes
+1465109188.207722142 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST response from tcp:host=rc11,port=12247 with 12 bytes
+1465109188.207784088 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST response from tcp:host=rc12,port=12247 with 12 bytes
+1465109188.208147886 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST response from tcp:host=rc13,port=12247 with 12 bytes
+1465109188.209369904 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109188.209383761 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 324 bytes
+1465109188.219701320 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109188.219721860 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 324 bytes
+1465109188.229972593 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109188.229994696 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 324 bytes
+1465109188.240267790 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109188.240288224 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 324 bytes
+1465109188.249736885 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received ENLIST_SERVER request from tcp:host=192.168.0.115,port=36470 with 53 bytes
+1465109188.249747555 CoordinatorServerList.cc:148 in enlistServer NOTICE[4]: Enlisting server at tcp:host=rc15,port=12247 (server id 6.0) supporting services: MASTER_SERVICE, BACKUP_SERVICE, PING_SERVICE, MEMBERSHIP_SERVICE
+1465109188.249759239 CoordinatorServerList.cc:772 in createReplicationGroups NOTICE[4]: Server 6.0 is now in replication group 2
+1465109188.249762606 CoordinatorServerList.cc:772 in createReplicationGroups NOTICE[4]: Server 5.0 is now in replication group 2
+1465109188.249765993 CoordinatorServerList.cc:772 in createReplicationGroups NOTICE[4]: Server 4.0 is now in replication group 2
+1465109188.249769440 TcpTransport.cc:955 in sendReply ERROR[1]: Sending ENLIST_SERVER response to tcp:host=192.168.0.115,port=36470 with 12 bytes
+1465109188.249797728 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending UPDATE_SERVER_LIST request to tcp:host=rc12,port=12247 with 316 bytes
+1465109188.249802693 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending UPDATE_SERVER_LIST request to tcp:host=rc13,port=12247 with 316 bytes
+1465109188.249807953 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending UPDATE_SERVER_LIST request to tcp:host=rc14,port=12247 with 316 bytes
+1465109188.250186896 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST response from tcp:host=rc12,port=12247 with 12 bytes
+1465109188.250191838 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST response from tcp:host=rc13,port=12247 with 12 bytes
+1465109188.250458907 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109188.250476178 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 385 bytes
+1465109188.250765595 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending GET_SERVER_ID request to tcp:host=rc15,port=12247 with 4 bytes
+1465109188.251036759 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received GET_SERVER_ID response from tcp:host=rc15,port=12247 with 12 bytes
+1465109188.251040271 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending UPDATE_SERVER_LIST request to tcp:host=rc15,port=12247 with 393 bytes
+1465109188.251054979 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending UPDATE_SERVER_LIST request to tcp:host=rc10,port=12247 with 316 bytes
+1465109188.251059435 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending UPDATE_SERVER_LIST request to tcp:host=rc11,port=12247 with 316 bytes
+1465109188.251324837 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST response from tcp:host=rc10,port=12247 with 12 bytes
+1465109188.251483362 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST response from tcp:host=rc11,port=12247 with 12 bytes
+1465109188.251847064 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST response from tcp:host=rc14,port=12247 with 12 bytes
+1465109188.253728577 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST response from tcp:host=rc15,port=12247 with 12 bytes
+1465109188.260727032 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109188.260748517 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 385 bytes
+1465109188.270994915 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109188.271015622 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 385 bytes
+1465109188.281262849 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109188.281283484 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 385 bytes
+1465109188.291538260 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109188.291562002 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 385 bytes
+1465109188.301835093 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109188.301855845 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 385 bytes
+1465109188.305736532 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received ENLIST_SERVER request from tcp:host=192.168.0.116,port=49656 with 53 bytes
+1465109188.305747310 CoordinatorServerList.cc:148 in enlistServer NOTICE[4]: Enlisting server at tcp:host=rc16,port=12247 (server id 7.0) supporting services: MASTER_SERVICE, BACKUP_SERVICE, PING_SERVICE, MEMBERSHIP_SERVICE
+1465109188.305758101 TcpTransport.cc:955 in sendReply ERROR[1]: Sending ENLIST_SERVER response to tcp:host=192.168.0.116,port=49656 with 12 bytes
+1465109188.305794738 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending UPDATE_SERVER_LIST request to tcp:host=rc11,port=12247 with 88 bytes
+1465109188.305800605 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending UPDATE_SERVER_LIST request to tcp:host=rc12,port=12247 with 88 bytes
+1465109188.305804061 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending UPDATE_SERVER_LIST request to tcp:host=rc13,port=12247 with 88 bytes
+1465109188.305807296 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending UPDATE_SERVER_LIST request to tcp:host=rc14,port=12247 with 88 bytes
+1465109188.305810529 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending UPDATE_SERVER_LIST request to tcp:host=rc15,port=12247 with 88 bytes
+1465109188.306125330 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST response from tcp:host=rc11,port=12247 with 12 bytes
+1465109188.306130335 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST response from tcp:host=rc12,port=12247 with 12 bytes
+1465109188.306132870 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST response from tcp:host=rc13,port=12247 with 12 bytes
+1465109188.306135276 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST response from tcp:host=rc14,port=12247 with 12 bytes
+1465109188.306803583 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending GET_SERVER_ID request to tcp:host=rc16,port=12247 with 4 bytes
+1465109188.307081299 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received GET_SERVER_ID response from tcp:host=rc16,port=12247 with 12 bytes
+1465109188.307084803 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending UPDATE_SERVER_LIST request to tcp:host=rc16,port=12247 with 454 bytes
+1465109188.307093082 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending UPDATE_SERVER_LIST request to tcp:host=rc10,port=12247 with 88 bytes
+1465109188.307326332 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST response from tcp:host=rc10,port=12247 with 12 bytes
+1465109188.307904132 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST response from tcp:host=rc15,port=12247 with 12 bytes
+1465109188.309939960 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST response from tcp:host=rc16,port=12247 with 12 bytes
+1465109188.312036385 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109188.312051809 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 446 bytes
+1465109188.322260573 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109188.322282069 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 446 bytes
+1465109188.332528826 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109188.332549796 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 446 bytes
+1465109188.342802819 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109188.342823449 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 446 bytes
+1465109188.353070117 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109188.353091018 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 446 bytes
+1465109188.363362536 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109188.363383565 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 446 bytes
+1465109188.373634423 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109188.373655404 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 446 bytes
+1465109188.375809135 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received ENLIST_SERVER request from tcp:host=192.168.0.117,port=45149 with 53 bytes
+1465109188.375823284 CoordinatorServerList.cc:148 in enlistServer NOTICE[4]: Enlisting server at tcp:host=rc17,port=12247 (server id 8.0) supporting services: MASTER_SERVICE, BACKUP_SERVICE, PING_SERVICE, MEMBERSHIP_SERVICE
+1465109188.375834125 TcpTransport.cc:955 in sendReply ERROR[1]: Sending ENLIST_SERVER response to tcp:host=192.168.0.117,port=45149 with 12 bytes
+1465109188.375866202 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending UPDATE_SERVER_LIST request to tcp:host=rc10,port=12247 with 88 bytes
+1465109188.375872700 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending UPDATE_SERVER_LIST request to tcp:host=rc11,port=12247 with 88 bytes
+1465109188.375876262 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending UPDATE_SERVER_LIST request to tcp:host=rc12,port=12247 with 88 bytes
+1465109188.375879600 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending UPDATE_SERVER_LIST request to tcp:host=rc13,port=12247 with 88 bytes
+1465109188.375882880 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending UPDATE_SERVER_LIST request to tcp:host=rc14,port=12247 with 88 bytes
+1465109188.375886486 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending UPDATE_SERVER_LIST request to tcp:host=rc15,port=12247 with 88 bytes
+1465109188.375890203 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending UPDATE_SERVER_LIST request to tcp:host=rc16,port=12247 with 88 bytes
+1465109188.376128691 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST response from tcp:host=rc10,port=12247 with 12 bytes
+1465109188.376169527 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST response from tcp:host=rc11,port=12247 with 12 bytes
+1465109188.376213265 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST response from tcp:host=rc14,port=12247 with 12 bytes
+1465109188.376216339 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST response from tcp:host=rc12,port=12247 with 12 bytes
+1465109188.376218846 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST response from tcp:host=rc15,port=12247 with 12 bytes
+1465109188.376284904 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST response from tcp:host=rc13,port=12247 with 12 bytes
+1465109188.376761814 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending GET_SERVER_ID request to tcp:host=rc17,port=12247 with 4 bytes
+1465109188.377050529 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received GET_SERVER_ID response from tcp:host=rc17,port=12247 with 12 bytes
+1465109188.377053903 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending UPDATE_SERVER_LIST request to tcp:host=rc17,port=12247 with 515 bytes
+1465109188.377929452 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST response from tcp:host=rc16,port=12247 with 12 bytes
+1465109188.379860519 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received UPDATE_SERVER_LIST response from tcp:host=rc17,port=12247 with 12 bytes
+1465109188.383856877 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_SERVER_LIST request from tcp:host=192.168.0.119,port=41641 with 8 bytes
+1465109188.383875764 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_SERVER_LIST response to tcp:host=192.168.0.119,port=41641 with 507 bytes
+1465109188.603260093 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received CREATE_TABLE request from tcp:host=192.168.0.118,port=38534 with 17 bytes
+1465109188.603352470 TableManager.cc:1027 in createTable NOTICE[4]: Creating table 'data' with id 1
+1465109188.603369695 TableManager.cc:1287 in notifyCreate NOTICE[4]: Assigning table id 1, key hashes 0x0-0xffffffffffffffff, to master 1.0
+1465109188.603377601 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending TAKE_TABLET_OWNERSHIP request to tcp:host=rc10,port=12247 with 36 bytes
+1465109188.608743457 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received TAKE_TABLET_OWNERSHIP response from tcp:host=rc10,port=12247 with 4 bytes
+1465109188.608750098 TcpTransport.cc:955 in sendReply ERROR[1]: Sending CREATE_TABLE response to tcp:host=192.168.0.118,port=38534 with 12 bytes
+1465109188.609004308 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_TABLE_ID request from tcp:host=192.168.0.118,port=38534 with 13 bytes
+1465109188.609010326 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_TABLE_ID response to tcp:host=192.168.0.118,port=38534 with 12 bytes
+1465109188.609235360 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received CREATE_TABLE request from tcp:host=192.168.0.118,port=38534 with 20 bytes
+1465109188.609238906 TableManager.cc:1027 in createTable NOTICE[4]: Creating table 'control' with id 2
+1465109188.609246217 TableManager.cc:1287 in notifyCreate NOTICE[4]: Assigning table id 2, key hashes 0x0-0xffffffffffffffff, to master 2.0
+1465109188.609248816 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending TAKE_TABLET_OWNERSHIP request to tcp:host=rc11,port=12247 with 36 bytes
+1465109188.613624847 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received TAKE_TABLET_OWNERSHIP response from tcp:host=rc11,port=12247 with 4 bytes
+1465109188.613629997 TcpTransport.cc:955 in sendReply ERROR[1]: Sending CREATE_TABLE response to tcp:host=192.168.0.118,port=38534 with 12 bytes
+1465109188.613874083 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_TABLE_ID request from tcp:host=192.168.0.118,port=38534 with 16 bytes
+1465109188.613878681 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_TABLE_ID response to tcp:host=192.168.0.118,port=38534 with 12 bytes
+1465109188.615807022 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received CREATE_TABLE request from tcp:host=192.168.0.118,port=38534 with 24 bytes
+1465109188.615810905 TableManager.cc:1027 in createTable NOTICE[4]: Creating table 'dataVizNorm' with id 3
+1465109188.615819171 TableManager.cc:1287 in notifyCreate NOTICE[4]: Assigning table id 3, key hashes 0x0-0x1fffffffffffffff, to master 3.0
+1465109188.615821617 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending TAKE_TABLET_OWNERSHIP request to tcp:host=rc12,port=12247 with 36 bytes
+1465109188.620983445 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received TAKE_TABLET_OWNERSHIP response from tcp:host=rc12,port=12247 with 4 bytes
+1465109188.620985170 TableManager.cc:1287 in notifyCreate NOTICE[4]: Assigning table id 3, key hashes 0x2000000000000000-0x3fffffffffffffff, to master 4.0
+1465109188.620989664 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending TAKE_TABLET_OWNERSHIP request to tcp:host=rc13,port=12247 with 36 bytes
+1465109188.625400255 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received TAKE_TABLET_OWNERSHIP response from tcp:host=rc13,port=12247 with 4 bytes
+1465109188.625401904 TableManager.cc:1287 in notifyCreate NOTICE[4]: Assigning table id 3, key hashes 0x4000000000000000-0x5fffffffffffffff, to master 5.0
+1465109188.625406094 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending TAKE_TABLET_OWNERSHIP request to tcp:host=rc14,port=12247 with 36 bytes
+1465109188.629959136 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received TAKE_TABLET_OWNERSHIP response from tcp:host=rc14,port=12247 with 4 bytes
+1465109188.629959905 TableManager.cc:1287 in notifyCreate NOTICE[4]: Assigning table id 3, key hashes 0x6000000000000000-0x7fffffffffffffff, to master 6.0
+1465109188.629964698 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending TAKE_TABLET_OWNERSHIP request to tcp:host=rc15,port=12247 with 36 bytes
+1465109188.634243162 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received TAKE_TABLET_OWNERSHIP response from tcp:host=rc15,port=12247 with 4 bytes
+1465109188.634244389 TableManager.cc:1287 in notifyCreate NOTICE[4]: Assigning table id 3, key hashes 0x8000000000000000-0x9fffffffffffffff, to master 7.0
+1465109188.634248967 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending TAKE_TABLET_OWNERSHIP request to tcp:host=rc16,port=12247 with 36 bytes
+1465109188.638174101 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received TAKE_TABLET_OWNERSHIP response from tcp:host=rc16,port=12247 with 4 bytes
+1465109188.638174910 TableManager.cc:1287 in notifyCreate NOTICE[4]: Assigning table id 3, key hashes 0xa000000000000000-0xbfffffffffffffff, to master 8.0
+1465109188.638179418 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending TAKE_TABLET_OWNERSHIP request to tcp:host=rc17,port=12247 with 36 bytes
+1465109188.642082326 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received TAKE_TABLET_OWNERSHIP response from tcp:host=rc17,port=12247 with 4 bytes
+1465109188.642083156 TableManager.cc:1287 in notifyCreate NOTICE[4]: Assigning table id 3, key hashes 0xc000000000000000-0xdfffffffffffffff, to master 1.0
+1465109188.642087427 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending TAKE_TABLET_OWNERSHIP request to tcp:host=rc10,port=12247 with 36 bytes
+1465109188.642317727 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received TAKE_TABLET_OWNERSHIP response from tcp:host=rc10,port=12247 with 4 bytes
+1465109188.642318452 TableManager.cc:1287 in notifyCreate NOTICE[4]: Assigning table id 3, key hashes 0xe000000000000000-0xffffffffffffffff, to master 2.0
+1465109188.642322477 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending TAKE_TABLET_OWNERSHIP request to tcp:host=rc11,port=12247 with 36 bytes
+1465109188.642560364 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received TAKE_TABLET_OWNERSHIP response from tcp:host=rc11,port=12247 with 4 bytes
+1465109188.642565272 TcpTransport.cc:955 in sendReply ERROR[1]: Sending CREATE_TABLE response to tcp:host=192.168.0.118,port=38534 with 12 bytes
+1465109188.642835259 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received RENEW_LEASE request from tcp:host=192.168.0.118,port=38534 with 12 bytes
+1465109188.642841973 TcpTransport.cc:955 in sendReply ERROR[1]: Sending RENEW_LEASE response to tcp:host=192.168.0.118,port=38534 with 28 bytes
+1465109188.643094390 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_TABLE_CONFIG request from tcp:host=192.168.0.118,port=38534 with 12 bytes
+1465109188.643123025 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_TABLE_CONFIG response to tcp:host=192.168.0.118,port=38534 with 528 bytes
+1465109188.659264383 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received CREATE_TABLE request from tcp:host=192.168.0.118,port=38534 with 29 bytes
+1465109188.659342644 TableManager.cc:1027 in createTable NOTICE[4]: Creating table 'dataVizWithIndex' with id 4
+1465109188.659354534 TableManager.cc:1287 in notifyCreate NOTICE[4]: Assigning table id 4, key hashes 0x0-0x1fffffffffffffff, to master 3.0
+1465109188.659360823 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending TAKE_TABLET_OWNERSHIP request to tcp:host=rc12,port=12247 with 36 bytes
+1465109188.659663566 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received TAKE_TABLET_OWNERSHIP response from tcp:host=rc12,port=12247 with 4 bytes
+1465109188.659666447 TableManager.cc:1287 in notifyCreate NOTICE[4]: Assigning table id 4, key hashes 0x2000000000000000-0x3fffffffffffffff, to master 4.0
+1465109188.659669957 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending TAKE_TABLET_OWNERSHIP request to tcp:host=rc13,port=12247 with 36 bytes
+1465109188.659923767 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received TAKE_TABLET_OWNERSHIP response from tcp:host=rc13,port=12247 with 4 bytes
+1465109188.659924569 TableManager.cc:1287 in notifyCreate NOTICE[4]: Assigning table id 4, key hashes 0x4000000000000000-0x5fffffffffffffff, to master 5.0
+1465109188.659928566 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending TAKE_TABLET_OWNERSHIP request to tcp:host=rc14,port=12247 with 36 bytes
+1465109188.660187429 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received TAKE_TABLET_OWNERSHIP response from tcp:host=rc14,port=12247 with 4 bytes
+1465109188.660188156 TableManager.cc:1287 in notifyCreate NOTICE[4]: Assigning table id 4, key hashes 0x6000000000000000-0x7fffffffffffffff, to master 6.0
+1465109188.660192180 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending TAKE_TABLET_OWNERSHIP request to tcp:host=rc15,port=12247 with 36 bytes
+1465109188.660450445 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received TAKE_TABLET_OWNERSHIP response from tcp:host=rc15,port=12247 with 4 bytes
+1465109188.660451156 TableManager.cc:1287 in notifyCreate NOTICE[4]: Assigning table id 4, key hashes 0x8000000000000000-0x9fffffffffffffff, to master 7.0
+1465109188.660455258 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending TAKE_TABLET_OWNERSHIP request to tcp:host=rc16,port=12247 with 36 bytes
+1465109188.660704088 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received TAKE_TABLET_OWNERSHIP response from tcp:host=rc16,port=12247 with 4 bytes
+1465109188.660704809 TableManager.cc:1287 in notifyCreate NOTICE[4]: Assigning table id 4, key hashes 0xa000000000000000-0xbfffffffffffffff, to master 8.0
+1465109188.660708815 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending TAKE_TABLET_OWNERSHIP request to tcp:host=rc17,port=12247 with 36 bytes
+1465109188.660945055 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received TAKE_TABLET_OWNERSHIP response from tcp:host=rc17,port=12247 with 4 bytes
+1465109188.660945754 TableManager.cc:1287 in notifyCreate NOTICE[4]: Assigning table id 4, key hashes 0xc000000000000000-0xdfffffffffffffff, to master 1.0
+1465109188.660949766 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending TAKE_TABLET_OWNERSHIP request to tcp:host=rc10,port=12247 with 36 bytes
+1465109188.661132749 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received TAKE_TABLET_OWNERSHIP response from tcp:host=rc10,port=12247 with 4 bytes
+1465109188.661133159 TableManager.cc:1287 in notifyCreate NOTICE[4]: Assigning table id 4, key hashes 0xe000000000000000-0xffffffffffffffff, to master 2.0
+1465109188.661137132 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending TAKE_TABLET_OWNERSHIP request to tcp:host=rc11,port=12247 with 36 bytes
+1465109188.661445096 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received TAKE_TABLET_OWNERSHIP response from tcp:host=rc11,port=12247 with 4 bytes
+1465109188.661449679 TcpTransport.cc:955 in sendReply ERROR[1]: Sending CREATE_TABLE response to tcp:host=192.168.0.118,port=38534 with 12 bytes
+1465109188.661637897 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received CREATE_INDEX request from tcp:host=192.168.0.118,port=38534 with 15 bytes
+1465109188.661641588 TableManager.cc:242 in createIndex NOTICE[4]: Creating index '1' for table '4'
+1465109188.661645028 TableManager.cc:1027 in createTable NOTICE[4]: Creating table '__backingTable:4:1:0' with id 5
+1465109188.661649939 TableManager.cc:1287 in notifyCreate NOTICE[4]: Assigning table id 5, key hashes 0x0-0xffffffffffffffff, to master 3.0
+1465109188.661651994 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending TAKE_TABLET_OWNERSHIP request to tcp:host=rc12,port=12247 with 36 bytes
+1465109188.661897579 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received TAKE_TABLET_OWNERSHIP response from tcp:host=rc12,port=12247 with 4 bytes
+1465109188.661900169 TableManager.cc:1027 in createTable NOTICE[4]: Creating table '__backingTable:4:1:1' with id 6
+1465109188.661903578 TableManager.cc:1287 in notifyCreate NOTICE[4]: Assigning table id 6, key hashes 0x0-0xffffffffffffffff, to master 4.0
+1465109188.661905450 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending TAKE_TABLET_OWNERSHIP request to tcp:host=rc13,port=12247 with 36 bytes
+1465109188.662156078 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received TAKE_TABLET_OWNERSHIP response from tcp:host=rc13,port=12247 with 4 bytes
+1465109188.662157990 TableManager.cc:1027 in createTable NOTICE[4]: Creating table '__backingTable:4:1:2' with id 7
+1465109188.662162133 TableManager.cc:1287 in notifyCreate NOTICE[4]: Assigning table id 7, key hashes 0x0-0xffffffffffffffff, to master 5.0
+1465109188.662163990 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending TAKE_TABLET_OWNERSHIP request to tcp:host=rc14,port=12247 with 36 bytes
+1465109188.662416973 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received TAKE_TABLET_OWNERSHIP response from tcp:host=rc14,port=12247 with 4 bytes
+1465109188.662418708 TableManager.cc:1027 in createTable NOTICE[4]: Creating table '__backingTable:4:1:3' with id 8
+1465109188.662422844 TableManager.cc:1287 in notifyCreate NOTICE[4]: Assigning table id 8, key hashes 0x0-0xffffffffffffffff, to master 6.0
+1465109188.662424719 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending TAKE_TABLET_OWNERSHIP request to tcp:host=rc15,port=12247 with 36 bytes
+1465109188.662669141 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received TAKE_TABLET_OWNERSHIP response from tcp:host=rc15,port=12247 with 4 bytes
+1465109188.662670847 TableManager.cc:1027 in createTable NOTICE[4]: Creating table '__backingTable:4:1:4' with id 9
+1465109188.662674887 TableManager.cc:1287 in notifyCreate NOTICE[4]: Assigning table id 9, key hashes 0x0-0xffffffffffffffff, to master 7.0
+1465109188.662676791 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending TAKE_TABLET_OWNERSHIP request to tcp:host=rc16,port=12247 with 36 bytes
+1465109188.662916168 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received TAKE_TABLET_OWNERSHIP response from tcp:host=rc16,port=12247 with 4 bytes
+1465109188.662917918 TableManager.cc:1027 in createTable NOTICE[4]: Creating table '__backingTable:4:1:5' with id 10
+1465109188.662921869 TableManager.cc:1287 in notifyCreate NOTICE[4]: Assigning table id 10, key hashes 0x0-0xffffffffffffffff, to master 8.0
+1465109188.662923735 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending TAKE_TABLET_OWNERSHIP request to tcp:host=rc17,port=12247 with 36 bytes
+1465109188.663050772 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received TAKE_TABLET_OWNERSHIP response from tcp:host=rc17,port=12247 with 4 bytes
+1465109188.663052002 TableManager.cc:1027 in createTable NOTICE[4]: Creating table '__backingTable:4:1:6' with id 11
+1465109188.663057323 TableManager.cc:1287 in notifyCreate NOTICE[4]: Assigning table id 11, key hashes 0x0-0xffffffffffffffff, to master 1.0
+1465109188.663059217 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending TAKE_TABLET_OWNERSHIP request to tcp:host=rc10,port=12247 with 36 bytes
+1465109188.663254936 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received TAKE_TABLET_OWNERSHIP response from tcp:host=rc10,port=12247 with 4 bytes
+1465109188.663256179 TableManager.cc:1027 in createTable NOTICE[4]: Creating table '__backingTable:4:1:7' with id 12
+1465109188.663260281 TableManager.cc:1287 in notifyCreate NOTICE[4]: Assigning table id 12, key hashes 0x0-0xffffffffffffffff, to master 2.0
+1465109188.663262128 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending TAKE_TABLET_OWNERSHIP request to tcp:host=rc11,port=12247 with 36 bytes
+1465109188.663498717 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received TAKE_TABLET_OWNERSHIP response from tcp:host=rc11,port=12247 with 4 bytes
+1465109188.663500500 TableManager.cc:1319 in notifyCreateIndex NOTICE[4]: Assigning table id 4 index id 1, to master 3.0
+1465109188.663503737 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending TAKE_INDEXLET_OWNERSHIP request to tcp:host=rc12,port=12247 with 35 bytes
+1465109188.663719529 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received TAKE_INDEXLET_OWNERSHIP response from tcp:host=rc12,port=12247 with 4 bytes
+1465109188.663721086 TableManager.cc:1319 in notifyCreateIndex NOTICE[4]: Assigning table id 4 index id 1, to master 4.0
+1465109188.663724700 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending TAKE_INDEXLET_OWNERSHIP request to tcp:host=rc13,port=12247 with 35 bytes
+1465109188.663933943 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received TAKE_INDEXLET_OWNERSHIP response from tcp:host=rc13,port=12247 with 4 bytes
+1465109188.663934773 TableManager.cc:1319 in notifyCreateIndex NOTICE[4]: Assigning table id 4 index id 1, to master 5.0
+1465109188.663938331 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending TAKE_INDEXLET_OWNERSHIP request to tcp:host=rc14,port=12247 with 35 bytes
+1465109188.664186244 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received TAKE_INDEXLET_OWNERSHIP response from tcp:host=rc14,port=12247 with 4 bytes
+1465109188.664186981 TableManager.cc:1319 in notifyCreateIndex NOTICE[4]: Assigning table id 4 index id 1, to master 6.0
+1465109188.664190681 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending TAKE_INDEXLET_OWNERSHIP request to tcp:host=rc15,port=12247 with 35 bytes
+1465109188.664428826 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received TAKE_INDEXLET_OWNERSHIP response from tcp:host=rc15,port=12247 with 4 bytes
+1465109188.664429574 TableManager.cc:1319 in notifyCreateIndex NOTICE[4]: Assigning table id 4 index id 1, to master 7.0
+1465109188.664433202 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending TAKE_INDEXLET_OWNERSHIP request to tcp:host=rc16,port=12247 with 35 bytes
+1465109188.664656114 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received TAKE_INDEXLET_OWNERSHIP response from tcp:host=rc16,port=12247 with 4 bytes
+1465109188.664656840 TableManager.cc:1319 in notifyCreateIndex NOTICE[4]: Assigning table id 4 index id 1, to master 8.0
+1465109188.664660552 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending TAKE_INDEXLET_OWNERSHIP request to tcp:host=rc17,port=12247 with 35 bytes
+1465109188.664944547 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received TAKE_INDEXLET_OWNERSHIP response from tcp:host=rc17,port=12247 with 4 bytes
+1465109188.664945277 TableManager.cc:1319 in notifyCreateIndex NOTICE[4]: Assigning table id 4 index id 1, to master 1.0
+1465109188.664948971 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending TAKE_INDEXLET_OWNERSHIP request to tcp:host=rc10,port=12247 with 35 bytes
+1465109188.665203255 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received TAKE_INDEXLET_OWNERSHIP response from tcp:host=rc10,port=12247 with 4 bytes
+1465109188.665204000 TableManager.cc:1319 in notifyCreateIndex NOTICE[4]: Assigning table id 4 index id 1, to master 2.0
+1465109188.665207660 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending TAKE_INDEXLET_OWNERSHIP request to tcp:host=rc11,port=12247 with 35 bytes
+1465109188.665423340 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received TAKE_INDEXLET_OWNERSHIP response from tcp:host=rc11,port=12247 with 4 bytes
+1465109188.665427989 TcpTransport.cc:955 in sendReply ERROR[1]: Sending CREATE_INDEX response to tcp:host=192.168.0.118,port=38534 with 4 bytes
+1465109188.665601142 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_TABLE_CONFIG request from tcp:host=192.168.0.118,port=38534 with 12 bytes
+1465109188.665628551 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_TABLE_CONFIG response to tcp:host=192.168.0.118,port=38534 with 879 bytes
+1465109188.665941333 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_TABLE_CONFIG request from tcp:host=192.168.0.117,port=45149 with 12 bytes
+1465109188.665956411 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_TABLE_CONFIG response to tcp:host=192.168.0.117,port=45149 with 879 bytes
+1465109188.669574428 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_TABLE_CONFIG request from tcp:host=192.168.0.113,port=40179 with 12 bytes
+1465109188.669592247 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_TABLE_CONFIG response to tcp:host=192.168.0.113,port=40179 with 879 bytes
+1465109188.673047552 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_TABLE_CONFIG request from tcp:host=192.168.0.116,port=49656 with 12 bytes
+1465109188.673063618 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_TABLE_CONFIG response to tcp:host=192.168.0.116,port=49656 with 879 bytes
+1465109188.674743863 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_TABLE_CONFIG request from tcp:host=192.168.0.111,port=55459 with 12 bytes
+1465109188.674757794 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_TABLE_CONFIG response to tcp:host=192.168.0.111,port=55459 with 879 bytes
+1465109188.676605092 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_TABLE_CONFIG request from tcp:host=192.168.0.110,port=47629 with 12 bytes
+1465109188.676618562 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_TABLE_CONFIG response to tcp:host=192.168.0.110,port=47629 with 879 bytes
+1465109188.678457051 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_TABLE_CONFIG request from tcp:host=192.168.0.114,port=50026 with 12 bytes
+1465109188.678470529 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_TABLE_CONFIG response to tcp:host=192.168.0.114,port=50026 with 879 bytes
+1465109188.680396554 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_TABLE_CONFIG request from tcp:host=192.168.0.110,port=47629 with 12 bytes
+1465109188.680410998 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_TABLE_CONFIG response to tcp:host=192.168.0.110,port=47629 with 879 bytes
+1465109188.681849234 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_TABLE_CONFIG request from tcp:host=192.168.0.115,port=36470 with 12 bytes
+1465109188.681863009 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_TABLE_CONFIG response to tcp:host=192.168.0.115,port=36470 with 879 bytes
+1465109188.682850148 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_TABLE_CONFIG request from tcp:host=192.168.0.118,port=38534 with 12 bytes
+1465109188.682863003 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_TABLE_CONFIG response to tcp:host=192.168.0.118,port=38534 with 879 bytes
+1465109188.688215867 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_TABLE_CONFIG request from tcp:host=192.168.0.118,port=38534 with 12 bytes
+1465109188.688229885 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_TABLE_CONFIG response to tcp:host=192.168.0.118,port=38534 with 879 bytes
+1465109188.688472955 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received GET_TABLE_CONFIG request from tcp:host=192.168.0.118,port=38534 with 12 bytes
+1465109188.688485801 TcpTransport.cc:955 in sendReply ERROR[1]: Sending GET_TABLE_CONFIG response to tcp:host=192.168.0.118,port=38534 with 879 bytes
+1465109188.688967609 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received SERVER_CONTROL_ALL request from tcp:host=192.168.0.118,port=38534 with 12 bytes
+1465109188.688972797 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending SERVER_CONTROL request to tcp:host=rc10,port=12247 with 27 bytes
+1465109188.688977419 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending SERVER_CONTROL request to tcp:host=rc11,port=12247 with 27 bytes
+1465109188.688980845 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending SERVER_CONTROL request to tcp:host=rc12,port=12247 with 27 bytes
+1465109188.688984292 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending SERVER_CONTROL request to tcp:host=rc13,port=12247 with 27 bytes
+1465109188.688987733 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending SERVER_CONTROL request to tcp:host=rc14,port=12247 with 27 bytes
+1465109188.688991027 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending SERVER_CONTROL request to tcp:host=rc15,port=12247 with 27 bytes
+1465109188.688994438 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending SERVER_CONTROL request to tcp:host=rc16,port=12247 with 27 bytes
+1465109188.688998005 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending SERVER_CONTROL request to tcp:host=rc17,port=12247 with 27 bytes
+1465109188.689156892 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received SERVER_CONTROL response from tcp:host=rc10,port=12247 with 16 bytes
+1465109188.689169255 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received SERVER_CONTROL response from tcp:host=rc13,port=12247 with 16 bytes
+1465109188.689171924 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received SERVER_CONTROL response from tcp:host=rc11,port=12247 with 16 bytes
+1465109188.689174426 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received SERVER_CONTROL response from tcp:host=rc16,port=12247 with 16 bytes
+1465109188.689176802 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received SERVER_CONTROL response from tcp:host=rc12,port=12247 with 16 bytes
+1465109188.689266747 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received SERVER_CONTROL response from tcp:host=rc14,port=12247 with 16 bytes
+1465109188.689270487 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received SERVER_CONTROL response from tcp:host=rc15,port=12247 with 16 bytes
+1465109188.689273038 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received SERVER_CONTROL response from tcp:host=rc17,port=12247 with 16 bytes
+1465109188.689275914 TcpTransport.cc:955 in sendReply ERROR[1]: Sending SERVER_CONTROL_ALL response to tcp:host=192.168.0.118,port=38534 with 144 bytes
+1465109188.689474920 TcpTransport.cc:324 in handleFileEvent ERROR[1]: Received SERVER_CONTROL_ALL request from tcp:host=192.168.0.118,port=38534 with 12 bytes
+1465109188.689478878 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending SERVER_CONTROL request to tcp:host=rc10,port=12247 with 27 bytes
+1465109188.689482973 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending SERVER_CONTROL request to tcp:host=rc11,port=12247 with 27 bytes
+1465109188.689486196 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending SERVER_CONTROL request to tcp:host=rc12,port=12247 with 27 bytes
+1465109188.689489212 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending SERVER_CONTROL request to tcp:host=rc13,port=12247 with 27 bytes
+1465109188.689492377 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending SERVER_CONTROL request to tcp:host=rc14,port=12247 with 27 bytes
+1465109188.689495423 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending SERVER_CONTROL request to tcp:host=rc15,port=12247 with 27 bytes
+1465109188.689498462 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending SERVER_CONTROL request to tcp:host=rc16,port=12247 with 27 bytes
+1465109188.689501504 TcpTransport.cc:841 in sendRequest ERROR[1]: Sending SERVER_CONTROL request to tcp:host=rc17,port=12247 with 27 bytes
+1465109188.689684808 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received SERVER_CONTROL response from tcp:host=rc10,port=12247 with 16 bytes
+1465109188.689689248 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received SERVER_CONTROL response from tcp:host=rc11,port=12247 with 16 bytes
+1465109188.689691707 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received SERVER_CONTROL response from tcp:host=rc13,port=12247 with 16 bytes
+1465109188.689693993 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received SERVER_CONTROL response from tcp:host=rc17,port=12247 with 16 bytes
+1465109188.689696329 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received SERVER_CONTROL response from tcp:host=rc14,port=12247 with 16 bytes
+1465109188.689698571 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received SERVER_CONTROL response from tcp:host=rc16,port=12247 with 16 bytes
+1465109188.689700762 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received SERVER_CONTROL response from tcp:host=rc12,port=12247 with 16 bytes
+1465109188.689703097 TcpTransport.cc:909 in handleFileEvent ERROR[1]: Received SERVER_CONTROL response from tcp:host=rc15,port=12247 with 16 bytes
+1465109188.689706004 TcpTransport.cc:955 in sendReply ERROR[1]: Sending SERVER_CONTROL_ALL response to tcp:host=192.168.0.118,port=38534 with 144 bytes

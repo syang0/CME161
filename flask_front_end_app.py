@@ -7,6 +7,10 @@ app = Flask(__name__, static_url_path='')
 def index():
     return app.make_response(open('app/index.html').read())
 
+@app.route("/ramcloud")
+def ramcloud():
+    return app.make_response(open('app/ramcloudVisualizer.html').read())
+
 # send assets (ex. assets/js/random_triangle_meshes/random_triangle_meshes.js)
 # blocks other requests, so your directories won't get listed (ex. assets/js will return "not found")
 @app.route('/assets/<path:path>')
@@ -28,6 +32,11 @@ def get_trellis():
 def get_trellis_limit(n_entries):
   with open('app/assets/data/trellis.json') as data_file:
     return json.dumps(json.load(data_file)[:n_entries])
+
+@app.route('/ramcloudData', methods=['GET'])
+def get_ramcloud():
+  with open('app/assets/data/processed.json') as data_file:
+    return json.dumps(json.load(data_file))
 
 def make_data_graph(data_list_in):
   idx = 0

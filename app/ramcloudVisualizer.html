@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>CME 161 Data Visualization</title>
+
+		<!-- site dependencies -->
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+		<link href="assets/css/style.css" rel="stylesheet">
+
+	 	<!-- Assignment 1.1 C3 -->
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css" type="text/css" rel="stylesheet">
+		<link href="https://lit-coast-4367.herokuapp.com/assets/css/c3.theme.css" type="text/css" rel="stylesheet">
+
+		<!-- Assignment 1.2 D3.js -->
+
+		<!-- Assignment 2.1 DC.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dc/1.7.5/dc.css">
+
+    <!-- Assignment 2.2 Crossfilter -->
+    <link rel="stylesheet" href="http://seiyria.com/bootstrap-slider/css/bootstrap-slider.css">
+		<link href="assets/css/assign2-2/assign2-2.css" rel="stylesheet">
+
+</head>
+<body>
+	<!-- begin wrap -->
+	<div id="wrap">
+
+	  <!-- begin container -->
+		<div class="container">
+
+			<!-- begin content -->
+			<div id="content">
+
+				<!-- begin row -->
+				<div class="row">
+
+					<!-- begin header -->
+					<div class=".col-xs-12 .col-md-12">
+						<h1>Visualization Portfolio of Stephen Yang</h1>
+						<h4><a href='https://sleepy-lowlands-53092.herokuapp.com/' target='_blank'>CME 161: Data Visualization</a> <small>Spring 2016</small></h4>
+						<hr>
+					</div>
+					<!-- end header -->
+					<!-- begin RAMCloud RPC viz -->
+					<div class="col-xs-8 col-md-8">
+						<h3>
+							RAMCloud RPC Visualizer
+						</h3>
+
+						<p>
+							Steps to completion
+							<ol>
+								<li>Make a node appear on demand</li>
+								<li>Make a node disappear on demand</li>
+								<li>Make messages bounce</li>
+							</ol>
+							Libraries used:
+							<ul>
+								<li><a href="https://d3js.org" target="_blank">D3.js (v 3.5.6)</a></li>
+							</ul>
+						</p>
+
+						<hr>
+						<div id="ramcloud">
+						</div>
+					</div>
+					<div class="col-xs-8 col-md-8">
+						<div id="ramcloudSeverDiagram"></div>
+					</div>
+					<div class="col-xs-4 col-md-4">
+						<h3>RPC List</h3>
+						<table id="rpc_list">
+							<div id="rpc_list_div">
+							</div>
+						</table>
+						<label id="rpcProgress">Progress: 0/0</label>
+						<div id="controls">
+							<input type="submit" value="Stop" id="playPauseBtn" onclick=playPauseBtnHandler()>
+							<input type="submit" value="Step" id="stepBtn" onclick=stepBtnHandler()>
+							<input type="submit" value="Reset" id="resetBtn" onclick=resetBtnHandler()>
+							<br>
+							<label>
+								Jump to..
+							</label>
+							<br>
+							<input type="submit" value="First Write" id="firstWrite" onclick=jumpToFirst('WRITE')>
+							<input type="submit" value="First Index Write" id="firstIndex" onclick=jumpToFirst('INSERT_INDEX_ENTRY')>
+
+						</div>
+					</div>
+
+					<!-- end RAMCloud RPC viz  -->
+			</div>
+			<!--end row-->
+
+				<div>
+					<hr>
+				</div>
+				<!-- Begin RAMCloud CrossFilter -->
+				<div id="">
+					<div id="dc_resetButton">
+						<button type="button">Reset</button>
+					</div>
+
+					<div style="float:left;">
+						<h3>Propagation Delay (µs)</h3>
+						<div id="duration_chart"></div>
+					</div>
+
+					<div style="float:left;">
+						<h3>Opcodes</h3>
+						<div id="opcodes_chart"></div>
+					</div>
+
+					<div style="float:left;">
+						<h3>Type</h3>
+						<div id="type_chart"></div>
+					</div>
+
+					<div style="float:left;">
+						<h3>Message Size (bytes)</h3>
+						<div id="size_chart"></div>
+					</div>
+
+					<div style="float:left;">
+						<h3>End to End latency (µs)</h3>
+						<div id="endToEnd_chart"></div>
+					</div>
+				</div>
+				<!-- End RAMCloud CrossFilter -->
+
+			</div>
+			<!-- end content -->
+
+		</div>
+		<!-- end container -->
+
+	</div>
+	<!-- end wrap -->
+
+	<!-- begin footer -->
+	<div id="footer">
+	  <div class="container">
+			<p class="text-muted credit"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="assets/images/cc_80x15.png" /></a> <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">This Portfolio</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://web.stanford.edu/~dderiso/cme151/" property="cc:attributionName" rel="cc:attributionURL">Your Name</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/dderiso/stanford_data_viz_course" rel="dct:source">https://github.com/dderiso/stanford_data_viz_course</a>.</p>
+	  </div>
+	</div>
+	<!-- end footer -->
+
+	<!-- Outside Libs -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+	<script src="http://code.jquery.com/jquery-2.2.4.min.js"
+			integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+			crossorigin="anonymous">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+
+	<script src="https://rawgit.com/crossfilter/crossfilter/master/crossfilter.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/dc/1.7.5/dc.min.js"></script>
+
+	<!-- My Libs -->
+	<script src='assets/js/ramcloud/main.js'></script>
+	<script src='assets/js/ramcloud/crossfilter.js'></script>
+
+	<!--&lt;!&ndash; Assignment 2.1 DC.js &ndash;&gt;-->
+	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/dc/1.7.5/dc.min.js"></script>-->
+	<!--<script src='assets/js/assign2-1/main.js'></script>-->
+
+	<!--&lt;!&ndash; Assignment 2.2 CrossFilter &ndash;&gt;-->
+	<!--<script src="http://seiyria.com/bootstrap-slider/dependencies/js/jquery.min.js"></script>-->
+	<!--<script src="http://seiyria.com/bootstrap-slider/js/bootstrap-slider.js"></script>-->
+	<!--<script src='assets/js/assign2-2/main.js'></script>-->
+
+</body>
+</html>
