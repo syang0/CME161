@@ -36,22 +36,57 @@
 					</div>
 					<!-- end header -->
 					<!-- begin RAMCloud RPC viz -->
-					<div class="col-xs-8 col-md-8">
+					<div class="col-xs-12 col-md-12">
 						<h3>
 							RAMCloud RPC Visualizer
 						</h3>
 
 						<p>
-
-							Libraries used:
+							This visualization shows the propagation of messages in the open-source software
+							<a href="https://github.com/PlatformLab/RAMCloud" target="_blank">RAMCloud</a> by analyzing log files.
+							<br>
+						</p>
+						<p>
+							This tool is intended to allow developers
+							to understand what's going on in the system and quickly notice bugs.The <a href="https://github.com/syang0/CME161/tree/master/RAMCloudData" target="_blank">code package</a>
+							included with the <a href="https://github.com/syang0/CME161" target="_blank">repository</a>
+							for this site is fully capable of analyzing the logs from any arbitrary RAMCloud run given
+							that it's been <a href="https://github.com/syang0/RAMCloud/commit/d441cf44fe7e678c194bcbefd5168cde5a7274c1" target="_blank"> properly instrumented.</a>
+							The RAMCloud run used for this demo...
 							<small>
-							<ul>
-								<li><a href="https://d3js.org" target="_blank">D3.js (v 3.5.6)</a></li>
-								<li><a href="https://jquery.com" target="_blank">jQuery (v 2.2.4)</a></li>
-								<li><a href="http://underscorejs.org" target="_blank">Underscore.js (v 1.8.3)</a></li>
-								<li><a href="https://dc-js.github.io/dc.js/" target="_blank">DC.js (v 1.7.5)</a></li>
-								<li><a href="http://square.github.io/crossfilter/" target="_blank">CrossFilter</a></li>
-							</ul>
+								<ul>
+									<li> Creates a table and issues 10 writes followed by 20 reads</li>
+									<li> Creates another table with an index, issues 10 writes and 10 index reads</li>
+									<li> Performs a global index read</li>
+									<li> Shuts down the servers</li>
+								</ul>
+							</small>
+
+						</p>
+						<p>
+							The first visualization shows the propagation of messages through the cluster. On the left is a
+							graphical representation of the cluster and on the right are the messages in more detail.
+							Below the messsages are some buttons to stop/continue the animation, step through 1 RPC at a time,
+							reset, and jump to interesting points in the benchmark. Additionally, one can brush over
+							the data on the RPC list and see the path show up on the left. Clicking on it will result
+							in a seek to that time in the replay.
+						</p>
+						<p>
+							The second visualization uses Crossfilter facilitate the analysis of the messages along various dimensions.
+							The most interesting of which, is the end-to-end latencies which connect the request (req) and
+							response (res) messages into complete RPCs. For example, by selecting the end of the end-to-end latencies,
+							we can see that TAKE_TABLET_OWNERSHIP is the longest running RPC in the system for that run.
+							<br>
+							<small>Note: Due to time skew in the cluster, some rpcs may appear to propagate faster than others.</small>
+						</p>
+						<p>
+							<small>
+							Libraries used:
+								<a href="https://d3js.org" target="_blank">D3.js (v 3.5.6) </a>
+								<a href="https://jquery.com" target="_blank">jQuery (v 2.2.4) </a>
+								<a href="http://underscorejs.org" target="_blank">Underscore.js (v 1.8.3) </a>
+								<a href="https://dc-js.github.io/dc.js/" target="_blank">DC.js (v 1.7.5) </a>
+								<a href="http://square.github.io/crossfilter/" target="_blank">Crossfilter</a>
 							</small>
 						</p>
 
