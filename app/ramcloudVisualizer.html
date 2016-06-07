@@ -59,10 +59,10 @@
 						<div id="ramcloud">
 						</div>
 					</div>
-					<div class="col-xs-8 col-md-8">
+					<div class="col-xs-7 col-md-7">
 						<div id="ramcloudSeverDiagram"></div>
 					</div>
-					<div class="col-xs-4 col-md-4">
+					<div class="col-xs-5 col-md-5">
 						<h3>RPC List</h3>
 						<table id="rpc_list">
 							<div id="rpc_list_div">
@@ -75,11 +75,12 @@
 							<input type="submit" value="Reset" id="resetBtn" onclick=resetBtnHandler()>
 							<br>
 							<label>
-								Jump to..
+								Jump to First...
 							</label>
 							<br>
-							<input type="submit" value="First Write" id="firstWrite" onclick=jumpToFirst('WRITE')>
-							<input type="submit" value="First Index Write" id="firstIndex" onclick=jumpToFirst('INSERT_INDEX_ENTRY')>
+							<input type="submit" value="Write" id="firstWrite" onclick=jumpToFirst('WRITE')>
+							<input type="submit" value="Index Write" id="firstIndex" onclick=jumpToFirst('INSERT_INDEX_ENTRY')>
+							<input type="submit" value="Server Control" id="firstIndex" onclick=jumpToFirst('SERVER_CONTROL_ALL')>
 
 						</div>
 					</div>

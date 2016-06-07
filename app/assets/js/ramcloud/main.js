@@ -67,20 +67,6 @@ var MACHINE_TYPE_TO_ATTR = {
     }
 };
 
-//TODO(syang0) can we generate this?
-var MSG_TYPE_TO_COLOR = {
-    "ping":"Yellow",
-    "WRITE":"Red",
-    "BACKUP_WRITE": "Maroon",
-    "READ":"GreenYellow",
-    "GET_TABLE_CONFIG":"Magenta",
-    "SERVER_CONTROL":"Pink",
-    "CREATE_TABLE":"Mediumblue",
-    "TAKE_TABLET_OWNERSHIP":"Midnightblue",
-    "READ_HASHES":"Darkturquoise",
-    "LOOKUP_INDEX_KEYS":"Greenyellow"
-};
-
 /**
  * This simulation viewport is modeled as MVC. The M is the Simulation class and it
  * issues high level commands to the V or View class to render specific actions
@@ -104,6 +90,7 @@ var MSG_TYPE_TO_COLOR = {
  * @constructor
  */
 var View = function(divId) {
+    var self = this;
     var SERVER_RADIUS = 25;
     var RPC_RADIUS = 10;
     var MAX_RPC_DELAY = 1000;
@@ -114,6 +101,10 @@ var View = function(divId) {
 
     // Local copy of the messages to visualize. Will be overwritten upon loadMsgs
     this.msgs = [];
+
+    // Maps opcode to color for the display elements.
+    // DO NOT SET HERE, will be overwritten in loadMsgs
+    this.opcode_to_color = {};
 
     //
     // Ready the svg for drawing
@@ -208,6 +199,15 @@ var View = function(divId) {
     this.loadMsgs = function(msgs) {
         this.msgs = msgs;
 
+        // Find unique set of opcodes and colorize them
+        opcode_to_color = {};
+        var opcodes = _.chain(msgs).pluck("opcode").unique().sort().value();
+        var interp = d3.interpolateString("hsl(0, 90%, 50%)", "hsl(360, 90%, 50%)");
+        _.each(opcodes, function(e, i, l) {
+            opcode_to_color[e] = interp(i/(l.length));
+        });
+
+        // Draw the list of rpcs
         var rpcRowsEnter = d3.select("#rpc_list_div")
             .style({
                 "height": HEIGHT*2/3 + "px",
@@ -224,17 +224,22 @@ var View = function(divId) {
             .attr("id", function (d, i) {
                 return "rpc_" + i
             })
-            .append("td")
-            .text(function (d) {
-                if (d.type == "req") {
-                    return d.from + " => " + d.to + " " + d.opcode;
-                } else {
-                    return d.to + " <= " + d.from + " " + d.opcode;
-                }
+            .html(function (d, i) {
+
+                var padStyle = " padding:0 5px 0 0;";
+                var bgStyle = " background-color: " + opcode_to_color[d.opcode];
+                var direction = (d.type == "req") ? (d.from + " => " + d.to) :  d.to + " <= " + d.from;
+
+                return "<td style=\""+padStyle+ bgStyle + "\"> "             + "</td>"
+                        + "<td style=\""+padStyle+           "\"> "+i+") "      + "</td>"
+                        + "<td style=\""+padStyle+           "\">" + direction  + "</td>"
+                        + "<td style=\""+padStyle+           "\">| " + d.opcode   + "</td>"
+
             })
-            .style("background-color", function (d) {
-                return MSG_TYPE_TO_COLOR[d.opcode]
-            })
+            // .style("background-color", function (d) {
+            //     return opcode_to_color[d.opcode]
+            // })
+            .style("cursor", "pointer")
             .on("mouseover", function(d, i) {
                 tooltip.transition()
                     .duration(200)
@@ -247,14 +252,25 @@ var View = function(divId) {
                              "<br>Corresponding: " + d.correspondingRpc)
                     .style("left", (d3.event.pageX) + "px")
                     .style("top", (d3.event.pageY - 28) + "px");
+
+
+                // draw for the path
+                self.drawRpcPath(d.from, d.to, d.opcode);
+                d3.select(this).style("background-color", "yellow");
             })
             .on("mouseout", function(d) {
                 tooltip.transition()
                     .duration(500)
                     .style("opacity", 0);
+
+                self.removeRpcPath();
+                d3.select(this).style("background-color", "white");
             })
             .on('click', function (d, i) {
-
+                window.sim.stop();
+                window.sim.skipTo(i);
+                $("#playPauseBtn").val("Play");
+                self.sendMsg(d.from, d.to, d.opcode, d.duration*SIMTIME_US_TO_REALTIME_MS);
             });
 
         // Initialize progress bar to position 0
@@ -281,12 +297,52 @@ var View = function(divId) {
             .attr("cx", fromSlot.x)
             .attr("cy", fromSlot.y)
             .attr("r", RPC_RADIUS)
-            .style("fill", MSG_TYPE_TO_COLOR[opcode])
+            .style("fill", opcode_to_color[opcode])
             .style("stroke", "black")
             .transition()
             .duration(duration)
             .attr("cx", toSlot.x)
             .attr("cy", toSlot.y)
+            .remove();
+    };
+
+    /**
+     * Draws a line between fromMachine and toMachine with the color
+     * corresponding to the opcode
+     *
+     * @param fromMachine - one endpoint for the line
+     * @param toMachine   - other endpoint for the line
+     * @param opcode      - opcode to color the line with
+     */
+    this.drawRpcPath = function(fromMachine, toMachine, opcode) {
+        var fromSlot = this.slots[fromMachine%this.NUM_SLOTS];
+        var toSlot = this.slots[toMachine%this.NUM_SLOTS];
+
+        this.svg
+            .append("line")
+            .attr({
+                "opacity":0,
+                "x1":fromSlot.x,
+                "y1":fromSlot.y,
+                "x2":toSlot.x,
+                "y2":toSlot.y,
+                "id":"rpcPath",
+                "stroke-width":2,
+                stroke:opcode_to_color[opcode]
+            })
+            .transition()
+            .duration(SERVER_UP_DURATION)
+            .style("opacity", 1);
+    };
+
+    /**
+     * Removes the line drawn by drawRpcPath
+     */
+    this.removeRpcPath = function() {
+        d3.selectAll("#rpcPath")
+            .transition()
+            .duration(SERVER_UP_DURATION)
+            .style("opacity", 0)
             .remove();
     };
 
@@ -394,7 +450,6 @@ var View = function(divId) {
  * @constructor
  */
 var Simulation = function(msgs, machines, view) {
-    var numMsgs = msgs.length;
     this.msgs = msgs;
 
     // Keeps track of which msg/rpc we're currently on in the playback
@@ -478,6 +533,16 @@ var Simulation = function(msgs, machines, view) {
             }
         }
 
+        this.skipTo(this.currIndex);
+    };
+
+    /**
+     * Skips the replay to a particular index;
+     *
+     * @param index - index to skip to
+     */
+    this.skipTo = function (index) {
+        this.currIndex = index;
         view.highlightMessageAt(this.currIndex, MAX_MSG_SCROLL_DURATION, MAX_MSG_SCROLL_DURATION);
     };
 
