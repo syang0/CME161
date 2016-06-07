@@ -38,12 +38,12 @@
 					<!-- begin RAMCloud RPC viz -->
 					<div class="col-xs-12 col-md-12">
 						<h3>
-							RAMCloud RPC Visualizer
+							Propagation of Messages and RPCs in RAMCloud
 						</h3>
 
 						<p>
 							This visualization shows the propagation of messages in the open-source software
-							<a href="https://github.com/PlatformLab/RAMCloud" target="_blank">RAMCloud</a> by analyzing log files.
+							<a href="https://github.com/PlatformLab/RAMCloud" target="_blank">RAMCloud</a> by log analysis.
 							<br>
 						</p>
 						<p>
@@ -66,9 +66,9 @@
 						<p>
 							The first visualization shows the propagation of messages through the cluster. On the left is a
 							graphical representation of the cluster and on the right are the messages in more detail.
-							Below the messsages are some buttons to stop/continue the animation, step through 1 RPC at a time,
+							Below the messsages are some buttons to stop/continue the animation, step through 1 message at a time,
 							reset, and jump to interesting points in the benchmark. Additionally, one can brush over
-							the data on the RPC list and see the path show up on the left. Clicking on it will result
+							the data on the Message List and see the path show up on the left. Clicking on it will result
 							in a seek to that time in the replay.
 						</p>
 						<p>
@@ -77,7 +77,8 @@
 							response (res) messages into complete RPCs. For example, by selecting the end of the end-to-end latencies,
 							we can see that TAKE_TABLET_OWNERSHIP is the longest running RPC in the system for that run.
 							<br>
-							<small>Note: Due to time skew in the cluster, some rpcs may appear to propagate faster than others.</small>
+							<small>Note: Due to time skew in the cluster, some rpcs may appear to propagate faster than others based on time.
+								This an inherent fault with distributed systems, not the animation.</small>
 						</p>
 						<p>
 							<small>
@@ -91,14 +92,13 @@
 						</p>
 
 						<hr>
-						<div id="ramcloud">
-						</div>
 					</div>
+
 					<div class="col-xs-7 col-md-7">
 						<div id="ramcloudSeverDiagram"></div>
 					</div>
 					<div class="col-xs-5 col-md-5">
-						<h3>RPC List</h3>
+						<h3>Message List</h3>
 						<table id="rpc_list">
 							<div id="rpc_list_div">
 							</div>
