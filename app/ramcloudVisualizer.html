@@ -63,6 +63,7 @@
 							</small>
 
 						</p>
+						<hr>
 						<p>
 							The first visualization shows the propagation of messages through the cluster. On the left is a
 							graphical representation of the cluster and on the right are the messages in more detail.
@@ -177,18 +178,20 @@
 	<!-- end footer -->
 
 	<!-- Outside Libs -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
 	<script src="http://code.jquery.com/jquery-2.2.4.min.js"
 			integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
 			crossorigin="anonymous">
 	</script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-	<script src="https://rawgit.com/crossfilter/crossfilter/master/crossfilter.min.js"></script>
+
+	<!-- Host Crossfilter ourselves so that we don't have to rely on flaky rawgit -->
+	<script src="assets/js/libs/crossfilter.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/dc/1.7.5/dc.min.js"></script>
 
 	<!-- My scripts -->
 	<script src='assets/js/ramcloud/main.js'></script>
-	<script src='assets/js/ramcloud/crossfilter.js'></script>
+	<script src='assets/js/ramcloud/tailLatencyAnalysis.js'></script>
 
 </body>
 </html>
