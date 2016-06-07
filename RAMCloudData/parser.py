@@ -1,10 +1,33 @@
 import glob
 import re
 
+# This python class takes the logs of an instrumented[1] RAMCloud[2] run
+# in the directory ./logs and attempts to correlate all the send/recv
+# logs across machines as messages and then correlates the messages
+# in to rpcs. The final output is a JSON file that can be consumed by the
+# RAMCloud Visualizer[3] created for CME 161 by Stephen Yang (syang0).
+# The JSON file is outputted through stdout.
+#
+# References
+#   [1] Instrumented RAMCloud - https://github.com/syang0/RAMCloud
+#   [2] RAMCloud Main Project - https://github.com/PlatformLab/RAMCloud
+#   [3] RAMCloud Visualizer Project - https://github.com/syang0/CME161
+#
+
+####################################################################################
+##
+## Step 1: Read all the log files and parse the relevant log messages into tuples
+##
+####################################################################################
+
+# Regex to filter relevant log files in the "./logs/" directory
+###
 # group 1 is server/client/coordinator tag
 # group 2 is server name (i.e. rc21)
 rightKindaFileRegex = re.compile("./logs/(client|server|coordinator)[^\.]*\.([^\.]+).log")
 
+# Regex to semantically parse the relevant log messages
+###
 # group 1 is time in seconds.nanoseconds
 # group 2 is RPC type
 # group 3 is request|response
@@ -15,10 +38,10 @@ sendRegex = re.compile("([\d]+\.[^ ]+) .* Sending (.*) (response|request) to ([^
 recvRegex = re.compile("([\d]+\.[^ ]+) .* Received ([^ ]+) (request|response) from ([^\:]+):host=([^,]+).* with (\d+) bytes")
 
 allMessages = []
-junkMsgs = [] # for debugging
 logFiles = glob.glob("./logs/*.log")
+machineToType = {} # maps machine # to type
+junkMsgs = [] # for debugging unmatched messages
 
-machineToType = {} # maps machine # to type #
 for logFile in logFiles:
 
   # Only open files we are interested in
@@ -29,7 +52,7 @@ for logFile in logFiles:
       thisServer = match.group(2)
       machineToType[thisServer] = machineType
 
-      # For every line, search for a send or a recv and add them to the list.
+      # For every line, search for a send or a recv and if found, add them to the list.
       for line in f.readlines():
         sendMatch = sendRegex.match(line)
         recvMatch = recvRegex.match(line)
@@ -46,26 +69,35 @@ for logFile in logFiles:
         else:
           junkMsgs.append(line);
 
+####################################################################################
+##
+## Step 2: Time-sort and filter extraneous localhost messages
+##
+####################################################################################
+
 # Time sort the messages
 timeSortedMsgs = sorted(allMessages, key=lambda msg: msg[0])
 
 # Now that we have all the messages in time-sorted order, we can start processing them
 def filterFunction(msg):
-  # First, let's get rid of any messages routed through localhost (i.e. messages to/from the same machine) as they're not interesting
+  # First, let's get rid of any messages routed through localhost
+  # (i.e. messages to/from the same machine) as they're not interesting
   if (msg[4] == msg[5]):
     return False
-
   return True
 
 filteredMsgs = [msg for msg in timeSortedMsgs if filterFunction(msg)]
 
-# Next, we correlate send events with recv events in the corresponding machines to get network delays.
+####################################################################################
+##
+## Step 3: Correlate send + recv logs across machines into messages with network delay
+##
+####################################################################################
 correlationIndexes = []
 
 # fill correlation index with invalid (i.e -1)
 for msg in filteredMsgs:
   correlationIndexes.append(-1)
-
 
 for idx, msg in enumerate(filteredMsgs):
   if msg[2] == "recv":
@@ -77,7 +109,7 @@ for idx, msg in enumerate(filteredMsgs):
     nextId = idx + 1
     while nextId < len(filteredMsgs):
       potentialRecv = filteredMsgs[nextId]
-      # if it's a recv with the same sender/recevers
+      # if it's a recv with the same sender/receivers
       if correlationIndexes[nextId] == -1 and potentialRecv[2] == "recv" and potentialRecv[1] == msg[1] and potentialRecv[3] == msg[3] and potentialRecv[4] == msg[4] and potentialRecv[5] == msg[5]:
         correlationIndexes[idx] = nextId
         correlationIndexes[nextId] = idx
@@ -86,7 +118,8 @@ for idx, msg in enumerate(filteredMsgs):
 
       nextId += 1
 
-# Debug: print all uncorrelated messages
+# Debug: print all uncorrelated messages and error out if there are any
+# P.S. If the time skew is great, there will be logs that will be mis-ordered in real time
 uncorrelatedCnt = 0
 for idx, correlation in enumerate(correlationIndexes):
   if correlation == -1:
@@ -95,67 +128,14 @@ for idx, correlation in enumerate(correlationIndexes):
 
 assert uncorrelatedCnt == 0
 
-# # Print out all the machine roles
-# print"{ \"machines\":["
-# cnt = 0
-# for k, v in machineToType.iteritems():
-#   if (cnt > 0):
-#     print(",")
-#   print "{\"id\":%s, \"type\":\"%s\"}" % (k[-2:], v)
-#   cnt += 1
-# print"],"
+####################################################################################
+##
+## Step 4: Materialize send + recv correlations
+##
+####################################################################################
 
-# # Print out all the messages
-
-# # Group 1: secs
-# # Group 2: nsecs
-# timeSplitterRegex = re.compile("([\d]+)\.([^ ]+)")
-
-# timeBegin = timeSplitterRegex.match(filteredMsgs[0][0])
-# beginSec = int(timeBegin.group(1))
-# beginNsec = int(timeBegin.group(2))
-# numLinesOutput = 0
-# print "\"messages\":["
-# for idx, coIdx in enumerate(correlationIndexes):
-#   if coIdx < idx:
-#     continue # Should already be printed
-
-#   if numLinesOutput > 0:
-#     print ","
-
-#   msg1 = filteredMsgs[idx]
-#   msg2 = filteredMsgs[coIdx]
-
-#   timeStart = timeSplitterRegex.match(msg1[0])
-#   timeEnd = timeSplitterRegex.match(msg2[0])
-
-#   startSec = int(timeStart.group(1))
-#   startNSec = int(timeStart.group(2))
-#   endSec = int(timeEnd.group(1))
-#   endNsec = int(timeEnd.group(2))
-
-#   relStartSec = startSec - beginSec
-#   relStartNSec = startNSec - beginNsec
-
-#   durationSec = endSec - startSec
-#   durationNSec = endNsec - startNSec
-
-#   # Change everything to microseconds to make it useful (anything less is typically due to time skew anyway)
-#   relStartUs = round((relStartSec*1e9 + relStartNSec)/1e3)
-#   durationUs = round((durationSec*1e9 + durationNSec)/1e3)
-
-
-#   # In RAMCloud, the machine numbers go from rc01-rc80. This prunes off the rc for easier client processing.
-#   fromMachine = msg1[4][-2:]
-#   toMachine = msg1[5][-2:]
-
-#   print "{\"relStart\":%d, \"duration\":%d, \"opcode\":\"%s\", \"type\":\"%s\", \"from\":%s, \"to\":%s, \"size\":%s}" % (relStartUs, durationUs, msg1[1], msg1[3], fromMachine, toMachine, msg1[6])
-#   numLinesOutput += 1
-# print"]}"
-
-
-# Materialize correlations
-
+# Regex for parsing time in the log messages
+###
 # Group 1: secs
 # Group 2: nsecs
 timeSplitterRegex = re.compile("([\d]+)\.([^ ]+)")
@@ -163,7 +143,6 @@ timeSplitterRegex = re.compile("([\d]+)\.([^ ]+)")
 timeBegin = timeSplitterRegex.match(filteredMsgs[0][0])
 beginSec = int(timeBegin.group(1))
 beginNsec = int(timeBegin.group(2))
-
 
 rpcs = []
 for idx, coIdx in enumerate(correlationIndexes):
@@ -210,10 +189,11 @@ for idx, coIdx in enumerate(correlationIndexes):
 
   rpcs.append(newDict)
 
-
-
-# Now that we've correlated the send/recv events into distinct rpcs with durations, we need to do another correlation
-# for the send/recv rpcs we've produced so that we can get the end to end latencies.
+####################################################################################
+##
+## Step 5: Correlate the messages into end-to-end RPCs.
+##
+####################################################################################
 for idx, rpc in enumerate(rpcs):
   if rpc["type"] == "req":
     # look for the corresponding recv
@@ -233,7 +213,8 @@ for idx, rpc in enumerate(rpcs):
         break
       nextId += 1
 
-# Debug: print all uncorrelated messages
+# Debug: Again, print all uncorrelated messages
+# P.S. If the time skews are great, you will have errors where the res occurs before the req.
 uncorrelatedCnt = 0
 for rpc in rpcs:
   if rpc["correspondingRpc"] == -1:
@@ -243,7 +224,11 @@ for rpc in rpcs:
 assert uncorrelatedCnt == 0
 
 
-# At this point all the rpcs are correlated with each other, we can start outputing the final JSON.
+####################################################################################
+##
+## Step 6: Output final JSON
+##
+####################################################################################
 
 # Print out all the machine roles
 print"{ \"machines\":["
@@ -256,7 +241,7 @@ for k, v in machineToType.iteritems():
 print""
 print"\t],"
 
-# Print out all the rpcs
+# Print out all the messages
 cnt = 0
 print "\"messages\":["
 for rpc in rpcs:
